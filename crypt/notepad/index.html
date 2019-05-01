@@ -1,0 +1,226 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glitcher32 Notepad</title>
+<link rel="shortcut icon" type="image/x-icon" href="../glitcher32Security.ico">
+<link rel="apple-touch-icon" href="../glitcher32Security.ico">
+<link rel="stylesheet" href="https://glitcher32.com/cursor.css" type="text/css">
+<meta name="theme-color" content="#ff0000" />
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#ff0000">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#ff0000">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="red">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<body oncontextmenu="return false;">
+<script src='//www.ip-approval.com/1/2/2018/ip-checker-js'></script>
+
+
+
+
+
+
+    </head>
+<style>
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+</style>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<style class="cp-pen-styles">#go{
+  display: none;
+}
+
+#decrypDiv{
+  display: none;
+}</style></head><body>
+<br><br>
+<div class="container">
+   <p style="text-align: center;"><img src="/logo.png" alt="" width="335" height="95" /></p>
+  <div class="form-group col-md-6 col-md-offset-3" id="decrypDiv">
+    <label id="decrypError" for="decrypPass">Enter password to view this file: </label>
+    <div class="input-group">
+      <input type="password" id="decrypPass" placeholder="Password" class="form-control">
+      <span class="input-group-btn">
+        <button class="btn btn-default" id="decrypGo">
+          <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </button>
+      </span>
+    </div>
+  </div>
+  
+  <div class="form-group col-md-12">
+    <div class="col-md-8 col-md-offset-2">
+      <label for="notepad">Insert plain text here:</label>
+      <textarea class="form-control" id="notepad" rows="10"></textarea>
+    </div>
+  </div>
+  
+  <div id="buttons" class="form-group col-md-offset-4" style="margin-bottom: 10px;">
+    <button class="btn btn-info col-md-3 " id="saveMe">Save me</button>
+    <button style="margin-left: 10px;" class="btn btn-danger col-md-3" id="encrypt" value="0">Encrypt | Off</button>
+  </div>
+  
+  <div class="col-md-4 col-md-offset-4">
+    <div class="input-group" id="go">
+      <span class="input-group-btn">
+        <button id="backButton" class="btn btn-default">
+          <span class="glyphicon glyphicon-circle-arrow-left"></span>
+        </button>     
+      </span>
+      <input id="goField" type="password" class="form-control" placeholder="Encryption Pass" aria-describedby="basic-addon1">
+      <span class="input-group-btn">
+        <button id="goButton" class="btn btn-default">
+          <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </button>      
+      </span>
+    </div>
+  </div>
+  
+  <div class="form-group col-md-6 col-md-offset-3">
+    <form id="inputForm">
+      <br>
+      <label class="col-md-12" align="center" for="loadFile">Load File?</label><br>
+      <div class="input-group">
+        <input id="inputFile" type="file" accept=".txt" class="btn btn-warning form-control" id="loadFile"></input>
+        <span class="input-group-btn">
+            <button type="submit" class="btn btn-default" id="inputButton">
+              <span class="glyphicon glyphicon-circle-arrow-right"></span>
+            </button>
+        </span>
+      </div>
+    </form>
+  </div>
+
+</div>
+<script src='https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/gibberish-aes/1.0.0/gibberish-aes.js'></script>
+<script >var result;
+
+$('#encrypt').click(function () {
+  if ($('#encrypt').val() == 0) {
+    $('#encrypt').val(1);
+    $('#encrypt').html('Encrypt | On');
+    $('#encrypt').removeClass('btn-danger');
+    $('#encrypt').addClass('btn-success');
+  } else
+  {
+    $('#encrypt').val(0);
+    $('#encrypt').html('Encrypt | Off');
+    $('#encrypt').removeClass('btn-success');
+    $('#encrypt').addClass('btn-danger');
+
+    if ($('#saveMe').css('display') == 'none') {
+      $('#saveMe').slideDown();
+      $('#go').slideUp();
+    }
+  }
+});
+
+$('#saveMe').click(function () {
+  if ($('#encrypt').val() == false) {
+    var text = $('#notepad').val();
+    saveAs("data:application/octet-stream;charset=utf-16le;utf8," + text, "glitcher32-notepad.txt");
+  } else
+  {
+    $('#buttons').slideUp();
+    $('#go').css('display', 'table');
+  }
+});
+
+$('#backButton').click(function () {
+  $('#buttons').slideDown();
+  $('#go').slideUp();
+});
+
+function saveAs(uri, filename) {
+  var link = document.createElement('a');
+  if (typeof link.download === 'string') {
+    link.href = uri;
+    link.download = filename;
+
+    //Firefox requires the link to be in the body
+    document.body.appendChild(link);
+
+    //simulate click
+    link.click();
+
+    //remove the link when done
+    document.body.removeChild(link);
+  } else {
+    window.open(uri);
+  }
+}
+
+$('#goButton').hover(function () {
+  $('#goButton').addClass('btn-success');
+});
+
+$('#goButton').click(function () {
+  var pass = $('#goField').val();
+  if (pass.length < 7) {
+    alert("Your password must be at least 7 characters");
+  } else
+  {
+    var text = $('#notepad').val();
+    var enc = GibberishAES.enc(text, pass);
+    saveAs("data:application/octet-stream;charset=utf-16le;utf8," + enc + "GLITCHER32", "glitcher32-encrypted.txt");
+    $('#notepad').val('');
+    $('#goField').val('');
+  }
+});
+
+$('#inputButton').click(function (e) {
+  var filepath = $('#inputFile').val();
+
+  if (filepath.substr(filepath.length - 3) == 'txt') {
+    var txt = $('#inputFile')[0].files[0];
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      result = reader.result;
+      if (result.substr(result.length - 10) == "GLITCHER32")
+      {
+        $('#decrypDiv').slideDown();
+      } else
+      {
+        $('#notepad').val(result);
+      }
+    };
+    reader.readAsText(txt);
+  } else
+  if (filepath.substr(filepath.length - 3) == '') {
+    alert("No file selected.");
+  } else
+  {
+    alert("Not a .txt file, please try again.");
+    $('#inputFile').val('');
+  }
+  return false;
+});
+
+$('#decrypGo').click(function () {
+  var pass = $('#decrypPass').val();
+  if (pass.length < 7) {
+    alert("Password must be at least 7 characters");
+    $('#decrypPass').val('');
+  } else
+  {
+    try {
+      var dec = GibberishAES.dec(result, pass);
+      $('#notepad').val(dec);
+      $('#decrypPass').val('');
+    }
+    catch (err) {
+      alert("Invalid Password");
+      $('#decrypPass').val('');
+    }
+  }
+});
+//# sourceURL=pen.js
+</script>
+</body></html>
