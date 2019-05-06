@@ -1,1 +1,124 @@
-<b>Hi</b>
+<style>
+      * {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  width: 960px;
+  margin: 30px auto;
+  font: 100%/1.5 Arial, sans-serif;
+  background: #E9E9E9;
+  color: #555;
+}
+
+h2 {
+  color: #D12200;
+  font-weight: 500;
+}
+
+button {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.download-button:active {
+  background: #A21B00;
+}
+
+.import-button:active {
+  background: #5D5D5D;
+}
+
+.download-button {
+  float: left;
+  margin-left: 0;
+  margin-right: -2px;
+  width: 190px;
+  height: 50px;
+  border: none;
+  border-right: 2px solid white;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+  color: white;
+  background: #D12200;
+}
+
+.import-button {
+  float: left;
+  margin-left: -2px;
+  width: 190px;
+  height: 50px;
+  border: none;
+  border-left: 2px solid white;
+  border-radius: 0 5px 5px 0;
+  font-size: 16px;
+  color: white;
+  background: #7E7E7F;
+}
+
+#area {
+  position: relative;
+}
+
+#area p {
+  position: absolute;
+  top: -5px;
+  /* Magic number? :( */
+  left: 173px;
+  background: #282829;
+  line-height: 25px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  border: 2px solid white;
+  font-size: 15px;
+}
+
+#file {
+  background: url(https://eu.static.mega.co.nz/images/extension/rar.png) no-repeat;
+  text-indent: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #D12200;
+}
+
+.clear {
+  clear: both;
+}
+
+    </style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<h2>Download File</h2>
+<p id="file">G-Browser.apk (5.2 MB)</p>
+<div id="area">
+<a href="#" >
+<button class="download-button">APK Download</button>
+</a>
+<a href="#" >
+<button class="import-button">Play Store (Soon)</button>
+</a>
+<p>or</p>
+</div>
+<div class="clear"></div>
+<p>
+</label>
+</p>
