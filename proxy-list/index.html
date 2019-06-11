@@ -1,0 +1,137 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1" />	
+<head>
+<title>Free Proxy List</title>
+<meta name="charset" content="UTF-8">
+<meta name="description" content="A FREE proxy list that is updated frequently.">
+<meta name="keywords" content="glitcher32, list, free, proxy, secure, security">
+<meta name="copyright" content="Copyright © 2019 glitcher32 Services">
+<meta name="author" content="glitcher32">
+<meta name="email" content="glitcher32@tutanota.com">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="content-language" content="EN">
+<meta name="Rating" content="General">
+
+    <!-- Privacy -->
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="x-dns-prefetch-control" content="off">
+    <meta name="format-detection" content="telephone=no">
+
+<link rel="shortcut icon" type="image/x-icon" href="../glitcher32Security.ico">
+<link rel="apple-touch-icon" href="../glitcher32Security.ico">
+	<link rel="icon" type="image/x-icon" href="/glitcher32Security.ico" />
+<!-- default favicon -->
+<link rel="shortcut icon" href="../glitcher32Security.ico" type="image/x-icon">
+
+<!-- wideley used favicon -->
+<link rel="icon" href="../glitcher32Security.ico" sizes="32x32" type="image/x-icon">
+ 
+<!-- for apple mobile devices -->
+<link rel="apple-touch-icon-precomposed" href="../glitcher32Security.ico" type="image/x-icon" sizes="152x152">
+<link rel="apple-touch-icon-precomposed" href="../glitcher32Security.ico" type="image/x-icon" sizes="120x120">
+ 
+<!-- google tv favicon -->
+<link rel="icon" href="../glitcher32Security.ico" sizes="96x96" type="image/x-icon">
+<link rel="stylesheet" href="../cursor.css" type="text/css">
+<meta name="theme-color" content="#ff0000" />
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#ff0000">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#ff0000">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="red">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<body oncontextmenu="return false;">
+
+
+<script src='//www.ip-approval.com/1/2/2018/ip-checker-js'></script>
+
+
+<center>
+<div class="info"><img src="https://glitcher32-modmenu.weebly.com/uploads/7/0/1/4/70146139/glitcher32.png" alt="glitcher32" width="246" height="70" /></div>
+</center>
+
+<p style="text-align: center;"><strong><span style="color: #da4444;">Free proxy list updated about every 15 minutes.</span></strong></p>
+
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>What is the proxy anonymity?</strong> There are 3 levels of proxies according to their anonymity.</span></p>
+<ul>
+<li style="text-align: center;"><span style="color: #ff0000;">Level 1 - Elite Proxy / Highly Anonymous Proxy: The web server can't detect whether you are using a proxy.</span></li>
+<li style="text-align: center;"><span style="color: #ff0000;">Level 2 - Anonymous Proxy: The web server can know you are using a proxy, but it can't know your real IP.</span></li>
+<li style="text-align: center;"><span style="color: #ff0000;">Level 3 - Transparent Proxy: The web server can know you are using a proxy and it can also know your real IP.</span></li>
+</ul>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong>What is HTTPS / SSL proxy? </strong>Secure websites whose url starts with <u>https://</u> instead of <u>http://</u> (ex. https://www.paypal.com) use the encrypted (SSL/HTTPS) connections between its web server and the visitors. Some proxies only support ordinary <u>http</u> sites and can't surf <u>https</u> sites.</span></p>
+<p style="text-align: center;"><br /><span style="color: #ff0000;"><strong>What is Google proxy? </strong>Proxies that support searching on Google are called Google proxy. Some programs need them to make large number of queries on Google. Since year 2016, all the <a style="color: #ff0000;" href="https://www.my-proxy.com/blog/google-proxies-dead" target="_blank" rel="noopener" data-cke-saved-href="https://www.my-proxy.com/blog/google-proxies-dead">Google proxies are dead</a>. Read that article for more information.</span></p>
+<p style="text-align: center;"><strong><span style="color: #ff0000;">Response time?</span></strong><span style="color: #ff0000;"> To sum it up for you, the lower the response time the better. They are in order. That means the first one on the list is the best most responsive and the others throughout the list get slower and slower. </span></p>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
+</head>
+<body>
+
+    
+
+<div class="container">
+    <p></p>
+    <table class="table-condensed" id="table" data-pagination=true data-page-size=15 data-page-list=20
+           data-striped=true data-escape=true data-sort-name="response_time" data-sort-order="asc">
+    </table>
+    <p></p>
+</div>
+
+<script>
+    var $table = $('#table');
+    $(function () {
+        $.get("https://raw.githubusercontent.com/fate0/proxylist/master/proxy.list", function(result) {
+            var proxylist_tmp = result.split('\n');
+            var proxylist = [];
+            $.each(proxylist_tmp, function(n, value) {
+                try {
+                    proxylist.push(JSON.parse(value));
+                } catch (e) {
+                    console.log(value);
+                }
+            });
+            $table.bootstrapTable({
+                data: proxylist,
+                columns: [
+                    {
+                        field: "host",
+                        title: "Host",
+                        sortable: true,
+                    },
+                    {
+                        field: "port",
+                        title: "Port",
+                        sortable: true,
+                    },
+                    {
+                        field: "type",
+                        title: "Type",
+                        sortable: true,
+                    },
+                    {
+                        field: "country",
+                        title: "Country",
+                        sortable: true,
+                    },
+                    {
+                        field: "anonymity",
+                        title: "Anonymity",
+                        sortable: true,
+                    },
+                    {
+                        field: "response_time",
+                        title: "Response Time",
+                        sortable: true,
+                    }
+                ]
+            });
+        });
+    });
+</script>
