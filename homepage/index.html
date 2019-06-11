@@ -1,0 +1,333 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />	
+<head>
+<title>glitcher32 Homepage</title>
+<meta name="charset" content="UTF-8">
+<meta name="description" content="">
+<meta name="keywords" content="glitcher32, homepage">
+<meta name="copyright" content="Copyright © 2019 glitcher32 Services">
+<meta name="author" content="glitcher32">
+<meta name="email" content="glitcher32@tutanota.com">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="content-language" content="EN">
+<meta name="Rating" content="General">
+
+    <!-- Privacy -->
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="x-dns-prefetch-control" content="off">
+    <meta name="format-detection" content="telephone=no">
+
+<link rel="shortcut icon" type="image/x-icon" href="../glitcher32Security.ico">
+<link rel="apple-touch-icon" href="../glitcher32Security.ico">
+	<link rel="icon" type="image/x-icon" href="/glitcher32Security.ico" />
+<!-- default favicon -->
+<link rel="shortcut icon" href="../glitcher32Security.ico" type="image/x-icon">
+
+<!-- wideley used favicon -->
+<link rel="icon" href="../glitcher32Security.ico" sizes="32x32" type="image/x-icon">
+ 
+<!-- for apple mobile devices -->
+<link rel="apple-touch-icon-precomposed" href="../glitcher32Security.ico" type="image/x-icon" sizes="152x152">
+<link rel="apple-touch-icon-precomposed" href="../glitcher32Security.ico" type="image/x-icon" sizes="120x120">
+ 
+<!-- google tv favicon -->
+<link rel="icon" href="../glitcher32Security.ico" sizes="96x96" type="image/x-icon">
+<link rel="stylesheet" href="../cursor.css" type="text/css">
+<meta name="theme-color" content="#ff0000" />
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#ff0000">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#ff0000">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="red">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<body oncontextmenu="return false;">
+
+
+<script src='//www.ip-approval.com/1/2/2018/ip-checker-js'></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,800|Montserrat:700'><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css'>
+<style class="cp-pen-styles">body {
+  font-family: "Open Sans";
+  font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  line-height: 1;
+  color: #fff;
+  position: relative;
+  z-index: -2;
+}
+.container:after {
+  content: "";
+  background: rgba(100, 100, 100, 0.4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.container #weather {
+  text-transform: capitalize;
+}
+.container #bgProgress {
+  height: 5px;
+  width: 0;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width .13s linear;
+}
+.container #clock {
+  font-family: Montserrat;
+  font-size: 120px;
+  letter-spacing: -8px;
+}
+@media screen and (max-height: 360px) {
+  .container #clock {
+    font-size: 64px;
+    letter-spacing: -4px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .container #clock {
+    font-size: 85px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .container #clock {
+    font-size: 64px;
+    letter-spacing: -4px;
+  }
+}
+.container #clock span {
+  display: inline-block;
+  vertical-align: top;
+  line-height: .5em;
+  font-size: 1.3em;
+}
+.container #date {
+  padding: 0 10px;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+}
+@media screen and (max-height: 320px) {
+  .container #date {
+    position: static;
+  }
+}
+@media screen and (max-width: 370px) {
+  .container #date {
+    font-size: 16px;
+  }
+}
+</style></head><body>
+
+<div class="container">
+  <div id="bgProgress"></div>
+<div><img src="https://glitcher32-modmenu.weebly.com/uploads/7/0/1/4/70146139/glitcher32.png" alt="glitcher32" width="226" height="64" /></div>
+  <div id="date">
+    <p>Monday, July 17, 2016</p>
+  </div>
+  <div id="clock">
+    <p>
+       3<span>:</span>00PM</p>
+  </div>
+  <div id="weather">
+    <p>
+       72℉ <i class="wi wi-day-sunny"> </i> Sunny</p>
+  </div>
+</div>
+<script src='//static.codepen.io/assets/common/stopExecutionOnTimeout-41c52890748cd7143004e05d3c5f786c66b19939c4500ce446314d1748483e13.js'></script>
+<script >var dateObj = function () {
+
+  function month(num) {
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    return months[num];
+  }
+
+  function day(num) {
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    return days[num];
+  }
+
+  function _getDate() {
+    var today = new Date(),
+    date = {};
+
+    date = {
+      date: today.getDate(),
+      day: day(today.getDay()),
+      month: month(today.getMonth()),
+      year: today.getFullYear() };
+
+
+    return date;
+  }
+
+  return _getDate;
+
+}();
+
+var timeObj = function () {
+  var time = {};
+
+  function _getTime() {
+    var _time = new Date(),
+    hours = _time.getHours(),
+    minutes = _time.getMinutes(),
+    seconds = _time.getSeconds();
+
+    time = {
+      hour: hours === 0 ? hours = 12 : hours > 12 ? hours - 12 : hours,
+      mins: minutes < 10 ? "0" + minutes : minutes,
+      period: hours >= 12 ? "PM" : "AM",
+      secs: seconds < 10 ? "0" + seconds : seconds };
+
+
+    return time;
+  }
+
+  return _getTime;
+}();
+
+var setDateTime = function () {
+  var elm_clock = document.querySelector('#clock p'),
+  elm_date = document.querySelector('#date p');
+
+  var defaults = {
+    dateMsg: "%dateDay, %dateMonth %dateDate, %dateYear",
+    timeMsg: "%timeHour<span>:</span>%timeMinutes %timePeriod" };
+
+
+  function _setTime() {
+    var msg = defaults.timeMsg.
+    replace('%timeHour', timeObj().hour).
+    replace('%timeMinutes', timeObj().mins).
+    replace('%timePeriod', timeObj().period);
+    elm_clock.innerHTML = msg;
+  }
+
+  function _setDate() {
+    var msg = defaults.dateMsg.
+    replace('%dateDay', dateObj().day).
+    replace('%dateMonth', dateObj().month).
+    replace('%dateDate', dateObj().date).
+    replace('%dateYear', dateObj().year);
+
+    elm_date.innerHTML = msg;
+  }
+
+  _setTime();
+  _setDate();
+
+  setInterval(function () {
+    _setDate();
+    _setTime();
+  }, 1000);
+}();
+
+var cycleBG = function () {
+  var bgContainer = document.querySelector('.container'),
+  progressBar = document.querySelector('#bgProgress'),
+  duration = 15000,
+  bgImages = [
+   "https://storage.googleapis.com/chydlx/codepen/minimalist-widget-page/dan-rogers-1156523.jpg",
+      "https://storage.googleapis.com/chydlx/codepen/minimalist-widget-page/jaanus-jagomagi-1245736.jpg",
+      "https://storage.googleapis.com/chydlx/codepen/minimalist-widget-page/patrick-tomasso-1272187.jpg",
+      "https://storage.googleapis.com/chydlx/codepen/minimalist-widget-page/sven-scheuermeier-37377.jpg",
+      "https://storage.googleapis.com/chydlx/codepen/minimalist-widget-page/tim-easley-1131834.jpg",
+      "https://storage.googleapis.com/chydlx/codepen/minimalist-widget-page/weroad-1102821.jpg"],
+
+  i = 0,
+  x = 0;
+
+  function changeBg() {
+    // if i >= bgImages.length -1
+    i >= bgImages.length - 1 ?
+    i = 0 :
+    // else
+    i++;
+
+    //change bg image
+    bgContainer.style.backgroundImage = 'url(' + bgImages[i] + ')';
+  }
+
+  changeBg();
+
+  setInterval(function () {
+    // if x === 100
+    x === 100 ? (
+
+    x = 0,
+    changeBg()) :
+
+    //else
+    x++;
+    //progressBar width = x
+    progressBar.style.width = x + '%';
+  }, duration / 100);
+}();
+
+var weatherWidget = function () {
+  var cont = document.querySelector('#weather');
+  var apiCall = {
+    id: "d65a9694ae6425d1e080326aab19db69",
+    unit: "imperial",
+    coor: {
+      lat: 32.715736,
+      lon: -117.161087 } };
+
+
+
+  function renderWeather(data) {
+    var html = "<p>";
+    html += Math.floor(data.main.temp);
+    html += apiCall.unit === "imperial" ? "℉" : "℃";
+    html += " <i class='wi wi-fw wi-owm-";
+    html += timeObj().period === "PM" ? "night-" : "day-";
+    html += data.weather[0].id + "'></i> ";
+    html += data.weather[0].description;
+    html += "</p>";
+
+    cont.innerHTML = html;
+  }
+
+  var apiURL = "http://api.openweathermap.org/data/2.5/weather?APPID=" + apiCall.id + "&units=" + apiCall.unit + "&lat=" + apiCall.coor.lat + "&lon=" + apiCall.coor.lon;
+
+  var http = new XMLHttpRequest();
+
+  http.onreadystatechange = function () {
+    if (http.readyState == 4 && http.status == 200) {
+      var data = JSON.parse(http.responseText);
+      renderWeather(data);
+    }
+  };
+  http.open("GET", apiURL, true);
+  http.send();
+
+}();
+//# sourceURL=pen.js
+</script
+</body></html>
