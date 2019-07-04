@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Roblox Chill Zone</title>
+<link rel="stylesheet" type="text/css" href="https://verify.eryn.io/static/style.css?v=5.2">
+<link href="https://fonts.googleapis.com/css?family=Muli:300,400" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.13/clipboard.min.js"></script>
+<link rel="icon" type="image/png" href="https://verify.eryn.io/static/favicon.png" />
+<script src="https://verify.eryn.io/static/vue.min.js"></script>
+</head>
+<body>
+<div class="container" id="app" v-cloak>
+<h1>Play Boys and Girls Chill Zone!</h1>
+<div v-if="fatalError" style="padding: 20%;">
+<h2>Something has gone wrong.</h2>
+<p>Please try again later.</p>
+<p><code>{{ fatalError }}</code></p>
+</div>
+<div class="form" v-else>
+<div class="signin" v-if="!loggedIn && !loading">
+<a href="https://www.roblox.com/games/3346491618/" class="button">Play on <img src="https://images.rbxcdn.com/7c69aea3037674c85907be8261544542.png" alt="Discord" /></a>
+<br><br>
+<p>Click the button above to goto the ROBLOX website where you can play the game. This game currently costs <b>$46 Robux</b> to play.</p>
+</div>
+<div class="loading" v-if="loading">
+<img src="https://verify.eryn.io/static/ring.svg" alt="Loading">
+<p>{{ state }}</p>
+</div>
+<div id="need-login" v-if="loggedIn">
+<div v-if="vstate == 'init'">
+<h3>Hello, {{ username }}!</h3>
+<div class="input">
+<input type="text" size="30" maxlength="20" placeholder="Roblox Username..." autofocus="autofocus" v-model.trim="roblox_username" />
+</div>
+<div class="input">
+<h2>Verify by <button v-on:click="verify('game')">joining a game</button> or <button v-on:click="verify('code')">adding a code to your profile</button></h2>
+
+</div>
+<div v-if="is_verified" style="padding: 30px">
+You are already verified. You can <a href="#" v-on:click="unverify()">unverify</a> or continue above with a new account.
+</div>
+</div>
+<div v-if="vstate != 'init' && vstate != 'verified'">
+<span class="link" v-on:click="vstate = 'init'">&lt; Change username</span>
+</div>
+<div v-if="vstate == 'error'">
+<h2>{{ verror }}</h2>
+</div>
+<div v-if="vstate == 'code'">
+<p>To verify that you own the account <strong>{{ roblox_username }}</strong>, please put the following code into your Roblox profile:</p>
+<p v-if="vcodeerror" class="error">{{ vcodeerror }}</p>
+<img src="/static/ring.svg" alt="Loading" v-if="code == '' || vchecking" style="width: 50px; margin: 0 auto; display: block;" />
+<div v-else style="text-align: center">
+<span class="code">{{ code }}</span>
+
+<span class="button" id="copy-btn" v-bind:data-clipboard-text="code">copy to clipboard</span>
+<button v-on:click="verify('check')">Done</button>
+<img src="/static/guide.png" alt="Verifying guide" class="guide" />
+</div>
+</div>
+<div v-if="vstate == 'game'">
+<p>To verify that you own the account <strong>{{ roblox_username }}</strong>, please join the following Roblox game:</p>
+<img src="https://verify.eryn.io/static/ring.svg" alt="Loading" v-if="code == '' || vchecking" style="width: 50px; margin: 0 auto; display: block;" />
+<div v-else style="text-align: center;">
+<a href="https://www.roblox.com/games/713226354/Verify" class="button" target="_blank">Verification Game</a>
+</div>
+</div>
+<div v-if="vstate == 'verified'" style="text-align: center;">
+<img src="https://verify.eryn.io/static/verified.png" alt="Verified!">
+<h3>Your account has been verified!</h3>
+<p v-if="code">You may now remove the code from your profile.</p>
+</div>
+</div>
+</div>
+</div>
+<p class="api"><a href="#">Wire: glitcher32</a> | <a href="https://glitcher32.com">Home</a></p>
+<script src="https://verify.eryn.io/app.js?6"></script>
+</body>
+</html>
