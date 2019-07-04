@@ -12,6 +12,7 @@
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="content-language" content="EN">
 <meta name="Rating" content="General">
+	<meta name="flattr:id" content="9j5000">
 
     <!-- Privacy -->
     <meta name="referrer" content="no-referrer">
@@ -108,147 +109,7 @@ document.write(unescape('%3c%73%63%72%69%70%74%20%74%79%70%65%3d%22%74%65%78%74%
 </center>
 	  </br>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<style>
-      .container {
-  align-items: center;
-  height: vh;
-  display: flex;
-  justify-content: center;
-}
 
-.wrapper {
-  max-width: 760px;
-}
-
-.alert {
-  align-items: center;
-  border: 1px solid transparent;
-  border-radius: 2px;
-  display: flex;
-  font-size: 16px;
-  line-height: 1;
-  padding: 12px;
-}
-.alert:before {
-  align-items: center;
-  border-radius: 50%;
-  content: "";
-  color: #fff;
-  display: inline-flex;
-  flex-shrink: 0;
-  justify-content: center;
-  height: 24px;
-  margin-right: 8px;
-  width: 24px;
-}
-
-.alert--success {
-  border-color: #ff0000;
-  background-color: #ff9c9c;
-  color: #000;
-}
-.alert--success:before {
-  background-color: #ff0000;
-  content: "\2713";
-}
-
-.alert--warning {
-  border-color: #faebcc;
-  background-color: #fcf8e3;
-  color: #8a6d3b;
-}
-.alert--warning:before {
-  background-color: #8a6d3b;
-  content: "\0021";
-}
-
-    </style>
-<script>
-  window.console = window.console || function(t) {};
-</script>
-<script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
-</head>
-<body translate="no">
-<div id="root" class="container"></div>
-<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/react/16.4.2/umd/react.production.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.2/umd/react-dom.production.min.js'></script>
-<script id="rendered-js">
-      class NetworkStatus extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      online: true };
-
-
-    this.goOnline = this.goOnline.bind(this);
-    this.goOffline = this.goOffline.bind(this);
-  }
-
-  goOnline() {
-    this.setState({ online: true });
-  }
-
-  goOffline() {
-    this.setState({ online: false });
-  }
-
-  componentDidMount() {
-    this.setState({
-      online: typeof navigator.onLine === "boolean" ? navigator.onLine : true });
-
-
-    window.addEventListener("online", this.goOnline);
-    window.addEventListener("offline", this.goOffline);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("online", this.goOnline);
-    window.removeEventListener("offline", this.goOffline);
-  }
-
-  render() {
-    return this.props.children(this.state);
-  }}
-
-
-// Utility
-const Alert = ({ message, theme, dismissable }) =>
-React.createElement("div", {
-  className: `alert ${theme ? `alert--${theme}` : ""}`,
-  role: "alert",
-  "aria-live": "assertive" },
-
-message);
-
-
-
-// Example usage
-const Example = () =>
-React.createElement("main", { className: "wrapper" },
-React.createElement("p", null, ""),
-React.createElement(NetworkStatus, null,
-({ online }) =>
-React.createElement(Alert, {
-  message: `If you're seeing this message, you're ${online ? 'online' : 'offline'}!`,
-  theme: online ? 'success' : 'warning' })));
-
-
-
-
-
-
-ReactDOM.render(React.createElement(Example, null), document.getElementById("root"));
-      //# sourceURL=pen.js
-    </script>
-<script src="https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script>
-</body>
-</html>
 
 <style>
 div.info {
