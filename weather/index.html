@@ -1,0 +1,147 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<!DOCTYPE html>
+<html>
+<head>
+<title>Weather</title>
+<link rel="stylesheet" type="text/css" href="https://verify.eryn.io/static/style.css?v=5.2">
+<link href="https://fonts.googleapis.com/css?family=Muli:300,400" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.13/clipboard.min.js"></script>
+<link rel="icon" type="image/png" href="https://images.rbxcdn.com/7c69aea3037674c85907be8261544542.png" />
+<script src="https://verify.eryn.io/static/vue.min.js"></script>
+<link href="https://tosdr.org/css/bootstrap.css" rel="stylesheet">
+		<link href="https://tosdr.org/css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="https://tosdr.org/css/custom.css" rel="stylesheet">
+    
+    <!-- Privacy -->
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="x-dns-prefetch-control" content="off">
+    <meta name="format-detection" content="telephone=no">
+
+<link rel="shortcut icon" type="image/x-icon" href="../glitcher32Security.ico">
+<link rel="apple-touch-icon" href="../glitcher32Security.ico">
+	<link rel="icon" type="image/x-icon" href="/glitcher32Security.ico" />
+<!-- default favicon -->
+<link rel="shortcut icon" href="../glitcher32Security.ico" type="image/x-icon">
+
+<!-- wideley used favicon -->
+<link rel="icon" href="../glitcher32Security.ico" sizes="32x32" type="image/x-icon">
+ 
+<!-- for apple mobile devices -->
+<link rel="apple-touch-icon-precomposed" href="../glitcher32Security.ico" type="image/x-icon" sizes="152x152">
+<link rel="apple-touch-icon-precomposed" href="../glitcher32Security.ico" type="image/x-icon" sizes="120x120">
+ 
+<!-- google tv favicon -->
+<link rel="icon" href="../glitcher32Security.ico" sizes="96x96" type="image/x-icon">
+<link rel="stylesheet" href="../cursor.css" type="text/css">
+<meta name="theme-color" content="#ff0000" />
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#ff0000">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#ff0000">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="red">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<body oncontextmenu="return false;">
+
+
+<script src='//www.ip-approval.com/1/2/2018/ip-checker-js'></script>
+
+
+
+
+
+
+    </head>
+<style>
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+</style>
+</head>
+<body>
+<div class="container" id="app" v-cloak>
+<h1>Weather</h1>
+<div v-if="fatalError" style="padding: 20%;">
+<h2>Something has gone wrong.</h2>
+<p>Please try again later.</p>
+<p><code>{{ fatalError }}</code></p>
+</div>
+<div class="form" v-else>
+<div class="signin" v-if="!loggedIn && !loading">
+
+
+<div class="codegena_iframe"><iframe src="https://muraliprajapati.github.io/weather/" height="100%" width="100%"  style="background:url('//codegena.com/wp-content/uploads/2015/09/loading.gif') white center center no-repeat;border:0px;" name="weather"></iframe></div><style>.codegena_iframe{position:relative;padding-bottom:56.25%;height:0;overflow: hidden;max-width:100%;}.codegena_iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style>
+</div>
+<div class="loading" v-if="loading">
+<img src="https://verify.eryn.io/static/ring.svg" alt="Loading">
+<p>{{ state }}</p>
+</div>
+<div id="need-login" v-if="loggedIn">
+<div v-if="vstate == 'init'">
+<h3>Hello, {{ username }}!</h3>
+<div class="input">
+<input type="text" size="30" maxlength="20" placeholder="Roblox Username..." autofocus="autofocus" v-model.trim="roblox_username" />
+</div>
+<div class="input">
+<h2>Verify by <button v-on:click="verify('game')">joining a game</button> or <button v-on:click="verify('code')">adding a code to your profile</button></h2>
+
+</div>
+<div v-if="is_verified" style="padding: 30px">
+You are already verified. You can <a href="#" v-on:click="unverify()">unverify</a> or continue above with a new account.
+</div>
+</div>
+<div v-if="vstate != 'init' && vstate != 'verified'">
+<span class="link" v-on:click="vstate = 'init'">&lt; Change username</span>
+</div>
+<div v-if="vstate == 'error'">
+<h2>{{ verror }}</h2>
+</div>
+<div v-if="vstate == 'code'">
+<p>To verify that you own the account <strong>{{ roblox_username }}</strong>, please put the following code into your Roblox profile:</p>
+<p v-if="vcodeerror" class="error">{{ vcodeerror }}</p>
+<img src="/static/ring.svg" alt="Loading" v-if="code == '' || vchecking" style="width: 50px; margin: 0 auto; display: block;" />
+<div v-else style="text-align: center">
+<span class="code">{{ code }}</span>
+
+<span class="button" id="copy-btn" v-bind:data-clipboard-text="code">copy to clipboard</span>
+<button v-on:click="verify('check')">Done</button>
+<img src="/static/guide.png" alt="Verifying guide" class="guide" />
+</div>
+</div>
+<div v-if="vstate == 'game'">
+<p>To verify that you own the account <strong>{{ roblox_username }}</strong>, please join the following Roblox game:</p>
+<img src="https://verify.eryn.io/static/ring.svg" alt="Loading" v-if="code == '' || vchecking" style="width: 50px; margin: 0 auto; display: block;" />
+<div v-else style="text-align: center;">
+<a href="https://www.roblox.com/games/713226354/Verify" class="button" target="_blank">Verification Game</a>
+</div>
+</div>
+<div v-if="vstate == 'verified'" style="text-align: center;">
+<img src="https://verify.eryn.io/static/verified.png" alt="Verified!">
+<h3>Your account has been verified!</h3>
+<p v-if="code">You may now remove the code from your profile.</p>
+</div>
+</div>
+</div>
+</div>
+<p class="api"><a href="#">Wire: glitcher32</a> | <a href="https://glitcher32.com">Home</a></p>
+<script src="https://verify.eryn.io/app.js?6"></script>
+</body>
+</html>
+
+ <script>
+$(document).on('keydown',function(e)
+{ 
+    var key = e.charCode || e.keyCode;
+    if(key == 123 || key == 27 )
+        {}
+    else
+        e.preventDefault();
+});
+</script>
