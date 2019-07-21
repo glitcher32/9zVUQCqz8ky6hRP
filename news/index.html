@@ -1,19 +1,17 @@
-<meta name="viewport" content="width=device-width, initial-scale=1" />	
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<!DOCTYPE html>
+<html>
 <head>
-<title>glitcher32 News</title>
-<meta name="charset" content="UTF-8">
-<meta name="description" content="Just news, keep updated on what is going on in the world.">
-<meta name="keywords" content="glitcher32, news">
-<meta name="copyright" content="Copyright © 2019 glitcher32 Services">
-<meta name="author" content="glitcher32">
-<meta name="email" content="glitcher32@tutanota.com">
-<meta name="robots" content="index, follow">
-<meta name="googlebot" content="index, follow">
-<meta http-equiv="pragma" content="no-cache">
-<meta http-equiv="content-language" content="EN">
-<meta name="Rating" content="General">
-	<meta name="flattr:id" content="9j5000">
-
+<title>News</title>
+<link rel="stylesheet" type="text/css" href="https://verify.eryn.io/static/style.css?v=5.2">
+<link href="https://fonts.googleapis.com/css?family=Muli:300,400" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.13/clipboard.min.js"></script>
+<link rel="icon" type="image/png" href="https://images.rbxcdn.com/7c69aea3037674c85907be8261544542.png" />
+<script src="https://verify.eryn.io/static/vue.min.js"></script>
+<link href="https://tosdr.org/css/bootstrap.css" rel="stylesheet">
+		<link href="https://tosdr.org/css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="https://tosdr.org/css/custom.css" rel="stylesheet">
+    
     <!-- Privacy -->
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="x-dns-prefetch-control" content="off">
@@ -51,6 +49,11 @@
 <script src='//www.ip-approval.com/1/2/2018/ip-checker-js'></script>
 
 
+
+
+
+
+    </head>
 <style>
 body{
     -webkit-touch-callout: none;
@@ -61,8 +64,17 @@ body{
     user-select: none;
 }
 </style>
+</head>
+<body>
+<div class="container" id="app" v-cloak>
+<div v-if="fatalError" style="padding: 20%;">
+<h2>Something has gone wrong.</h2>
+<p>Please try again later.</p>
+<p><code>{{ fatalError }}</code></p>
+</div>
+<div class="form" v-else>
+<div class="signin" v-if="!loggedIn && !loading">
 
-<body bgcolor="#000000">
 
 <center><div class="feedgrabbr_widget" id="fgid_a5577e4758af40767c4f4e115"></div>
 <script>if (typeof (fg_widgets) === "undefined") fg_widgets = new Array(); fg_widgets.push("fgid_a5577e4758af40767c4f4e115");</script>
@@ -76,3 +88,21 @@ body{
 <center><div class="feedgrabbr_widget" id="fgid_aa6a3cbbceebdfa2a4eda0d43"></div>
 <script>if (typeof (fg_widgets) === "undefined") fg_widgets = new Array(); fg_widgets.push("fgid_aa6a3cbbceebdfa2a4eda0d43");</script>
 <script async src="https://www.feedgrabbr.com/widget/fgwidget.js"></script></center>
+
+<a href="../" class="button">Home<img src="" alt="" /></a>
+</div>
+<p class="api"><a href="#">Wire: glitcher32</a> | <a href="https://glitcher32.com">Home</a></p>
+<script src="https://verify.eryn.io/app.js?6"></script>
+</body>
+</html>
+
+ <script>
+$(document).on('keydown',function(e)
+{ 
+    var key = e.charCode || e.keyCode;
+    if(key == 123 || key == 27 )
+        {}
+    else
+        e.preventDefault();
+});
+</script>
