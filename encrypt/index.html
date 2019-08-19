@@ -36,9 +36,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="red">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <body oncontextmenu="return false;">
-<link rel="stylesheet" href="../encrypt/style.css">
+<link rel="stylesheet" href="/encrypt/style.css">
 
-<script src='//www.ip-approval.com/1/2/2018/ip-checker-js'></script>
 
 <style>
 body{
@@ -54,38 +53,31 @@ body{
 
 
 
+<body>
 
-
-
-<div class="loader">
-        <div class="sk-folding-cube">
-            <div class="sk-cube1 sk-cube"></div>
-            <div class="sk-cube2 sk-cube"></div>
-            <div class="sk-cube4 sk-cube"></div>
-            <div class="sk-cube3 sk-cube"></div>
-        </div>
-    </div>
-
- <script src="../encrypt/bundle.js"></script>
-
-  <div class="container h-100">
+   
+    <div class="container h-100">
         <div class="row h-100 justify-content-center align-items-center">
+
             <div class="col sm-12 col-md-8 col-lg-6">
-                <h2 class="display-4 title"><p style="text-align: center;"><img src="../logo.png" alt="" width="335" height="95" /></p></h2>
+                <h2 class="display-4 title"><a href="/"> <img src="../logo.png" width="75"></a></h2>
                 <p class="lead">
                     A Free,
                     <u>Fast</u>,
                     <u>Secure</u> and
                     <u>Serverless</u> File Encryption.
                 </p>
+
                 <div class="custom-file">
                     <input type="file" class="custom-file-input" id="customFile">
                     <label class="custom-file-label" for="customFile">
                         <div id="file-placeholder">Choose a file to encrypt/decrypt</div>
                     </label>
                 </div>
+
                 <br>
                 <br>
+
                 <div class="form-group">
                     <div class="input-group mb-3">
                         <label for="inputPassword"></label>
@@ -98,6 +90,7 @@ body{
                                     class="fas fa-sync-alt"></i></button>
                         </div>
                     </div>
+
                     <small id="passwordHelpInline" class="text-muted">
                         <b>Strength</b>: <span id="strength-text"></span>
                     </small>
@@ -106,6 +99,7 @@ body{
                             aria-valuenow="0" aria-valuemin="0" aria-valuemax="4"></div>
                     </div>
                 </div>
+
                 <button type="button" class="btn btn-outline-dark" id="encryptBtn">Encrypt</button>
                 <button type="button" class="btn btn-outline-dark" id="decryptBtn">Decrypt</button>
                 <button type="button" class="btn btn-outline-danger" id="resetBtn" style="display: none"><i
@@ -116,19 +110,54 @@ body{
                 </small>
                 <br>
                 <br>
+
                 <div id="error"></div>
+
             </div>
             <!--end col-->
         </div><!-- end row -->
         <br>
         <br>
+
         <div class="row h-100 justify-content-center align-items-center">
-            <div class="col-sm-12 col-md-8 col-lg-6" id="results"></div>
+            <div class="col-sm-12 col-md-8 col-lg-6" id="results">
+
+
+
+            </div>
             <!--end col-->
         </div><!-- end row -->
+
     </div><!-- end container -->
+    <br>
+
+    <div class="footer">
+        <nav class="navbar  navbar-light bg-light">
+            <ul class="nav navbar-nav mx-auto">
+                <li class="nav-item">
+                    <div class="nav-link">Built and developed with <i class="fas fa-heart" style="color:#e74c3c;"></i>
+                        by <a href="https://github.com/sh-dv" class="text-dark"> Shadi.</a>
+                        <br> BTC:<a href="https://glitcher32.com/"
+                            class="text-white bg-secondary">Home</a></div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="loader">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+    </div>
+    <!-- bundled app file js -->
+    <script src="/encrypt/bundle.js"></script>
 
 
+</body>
+
+</html>
 
 <script>
 $(document).on('keydown',function(e)
