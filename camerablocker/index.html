@@ -44,7 +44,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="red">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <body oncontextmenu="return false;">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <script src='//www.ip-approval.com/1/2/2018/ip-checker-js'></script>
 </head>
@@ -59,230 +59,85 @@ body{
 }
 </style>
 
-<figure id="splash-device">
-  <div class="device-image ios">
-    <div class="device">
-      <span class="site-name"></span>
-      <center><div class="info"><img src="https://glitcher32.com/logo.png" alt="glitcher32"></div></center>
-      <center><img src="https://github.com/glitcher32/glitcher32.github.io/raw/master/camerablocker/screenshot.png"/></center>
-	    <br> </br>
-<br> </br>
-<br> </br>
-    </div>
-  </div>
-  <figcaption id="splash-message">
-    <div class="message">
-      <span class="app-icon"></span>
-      <div class="copy">
-        <span class="ellipsis">Fastest and most efficient way to protect your camera!</span>
-        <span class="ellipsis">Best of all it's</span>
-        <span class="ellipsis site-name"><b>FREE</b> and always will be!</span> 
-      </div>
-    </div>
-    <a href="https://github.com/glitcher32/glitcher32.github.io/raw/master/CameraBlocker.apk"><button><b>Download APK</b> </button>
-  </figcaption>
-</figure>
+<p style="text-align: center;"><img src="https://glitcher32.com/logo.png" alt="" width="193" height="55" /></p>
+<p style="text-align: center;"><img src="https://github.com/glitcher32/glitcher32.github.io/raw/master/camerablocker/screenshot.png" alt="" width="322" height="322" /></p>
+<p style="text-align: center;"><span style="color: #ff0000;">glitcher32 Camera Blocker is the fastest and most efficient way to <strong>protect your camera from unwanted capture</strong>. The app doesn't need any unnecessary device permissions, the app doesn't even have internet access meaning <strong>no ads or trackers</strong>, and best of all, its <strong>free</strong> without any catch.</span></p>
+<p style="text-align: center;"><span style="color: #ff0000;">Simply enable the toggle and activate admin, then your camera will be completely useless from being used to ensure your privacy stays safe.</span><br /><br /><span style="color: #ff0000;">At any time you need to use your camera, simply toggle the switch OFF and your camera will fully work again.</span><br /><br /><span style="color: #ff0000;">For any reason you need to uninstall the app, make sure the protection is turned off and admin rights are disabled.</span></p>
+<p style="text-align: center;"><span style="color: #ff0000;">The notification feature will NOT work on Android v8.1 or up, but anything lower should be fine.</span></p>
+
+
+<a href="https://github.com/glitcher32/glitcher32.github.io/raw/master/CameraBlocker.apk" class="float">
+<i class="fa fa-download my-float"></i>
+</a>
+<div class="label-container">
+<div class="label-text">Download APK</div>
+<i class="fa fa-play label-arrow"></i>
+</div>
+
 
 <style>
-body {
-  padding:0;
-  background:#FF0000;
-  font:16px 'Helvetica Neue';
-  background-image: linear-gradient(to bottom right, transparent,  #FF0000 25%, #FF0000 50%, #B30000 75%, #FF0000);
-  background-size:cover;
-  margin:0;
+*{padding:0;margin:0;}
+
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	background-color:#;
+	font-size:12px;
 }
 
-body, html {
-  height:100%;
+.label-container{
+	position:fixed;
+	bottom:48px;
+	right:105px;
+	display:table;
+	visibility: hidden;
 }
 
-* {
-  box-sizing:border-box;
+.label-text{
+	color:#FFF;
+	background:rgba(51,51,51,0.5);
+	display:table-cell;
+	vertical-align:middle;
+	padding:10px;
+	border-radius:3px;
 }
 
-figure {
-  margin:0;
+.label-arrow{
+	display:table-cell;
+	vertical-align:middle;
+	color:#333;
+	opacity:0.5;
 }
 
-#splash-message {
-  animation:.5s slideup;
-  text-align:center;
-  background:#b20000;
-  padding: 25px 10px;
-  left:0;
-  right:0;
-  bottom:0;
-  position:fixed;
-  .message {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    color:#231F20;
-    max-width:300px;
-    margin:0 auto 20px;
-    position:relative;
-    text-align:left;
-    font-size:16px;
-    line-height:18px;
-    font-weight:300;
-    .site-name {
-      font-weight:500;
-    }
-    .copy {
-      padding-left:20px;
-      max-width:90%;
-    }
-  }
-  .app-icon {
-    background: url(#) center center no-repeat;
-    background-size:100%;
-    min-width:50px;
-    height:50px;
-  }
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#FF0000;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
 }
 
-.device-image {
-  animation:.6s slideup;
-  text-align:center;
-  height:100%;
-  display:flex;
-  align-items:center;
-  flex-direction:column;
-  justify-content: flex-end;
-  &.ios {
-    .site-name {
-      top: 160px;
-    }
-  }
-  &.android {
-    .site-name {
-      top:135px;
-    }
-  }
-  .device {
-    transform:scale(.8);
-    position:relative;
-    transform-origin:bottom;
-    @media(min-height:535px) {
-      transform:scale(.9);
-    }
-    @media(min-height:600px) {
-      transform:scale(1);
-    }
-  }
-  .site-name {
-    color:#FFF;
-    font-family:Sans-Serif;
-    position:absolute;
-    left:50%;
-    transform:translateX(-50%);
-    top:135px;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    max-width:85%;
-    display:block;
-    margin:auto;
-  }
-  img {
-    vertical-align: bottom;
-    max-width:300px;
-    margin-bottom:170px;
-  }
+.my-float{
+	font-size:24px;
+	margin-top:18px;
 }
 
-button {
-  font-weight:100;
-  letter-spacing:2px;
-  background:#FF0000;
-  border:0;
-  padding:15px 25px;
-  border-radius:45px;
-  font-size:18px;
-  color:#FFF;
-  display:inline-block;
-  margin:auto;
+a.float + div.label-container {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease;
 }
 
-#splash-device {
-  display:flex;
-  flex-direction:column;
-  height:100%;
-  justify-content:space-between;
-  align-items: stretch;
+a.float:hover + div.label-container{
+  visibility: visible;
+  opacity: 1;
 }
 
-.ellipsis {
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  display:inline-block;
-  max-width:100%;
-}
-
-@media(max-height:400px) and (orientation:landscape) {
-  .device-image {
-     width:40vw;
-    .device {
-      @media(max-height:340px) {
-        transform:scale(.6);
-      }
-    }
-    img {
-      margin-bottom:0;
-    }
-  }
-  #splash-message {
-    animation:.3s slideInFromRight;
-    width:58vw;
-    top:50%;
-    left:auto;
-    transform:translateY(-50%);
-    right:0;
-    bottom:auto;
-    .app-icon {
-      min-width:40px;
-      height:40px;
-    }
-    .message .copy {
-      padding-left:15px;
-      font-size:15px;
-      .site-name {
-        font-size:16px;
-      }
-    }
-    button {
-      font-size:16px;
-    }
-  }
-}
-
-@keyframes slideup {
-  from {
-    transform:translateY(100%);
-    opacity:0;
-    
-  }
-  to {
-    opacity:1;
-    transform:translate(0);
-  }
-}
-
-@keyframes slideInFromRight {
-  from {
-    transform:translate(100%,-50%);
-    opacity:0;
-    
-  }
-  to {
-    opacity:1;
-    transform:translateX(0,-50%);
-  }
-}
 </style>
-
 
  <script>
 $(document).on('keydown',function(e)
