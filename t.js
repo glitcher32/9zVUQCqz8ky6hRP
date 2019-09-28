@@ -10,6 +10,11 @@ r_text[7] = "If you need a good privacy guide, check out PrivacyTools.io";
 r_text[8] = "Never trust a company like Google (YouTube) or Facebook (WhatsApp).";
 r_text[9] = "Self hosting is a better option if possible. Never trust your files/info on someone else's server.";
 r_text[10] = "Protect your Android device's camera from unwanted capture. Check out glitcher32.com/camerablocker";
+r_text[11] = "A privacy phone OS is /e/OS. Check them out at e.foundation";
+r_text[12] = "The safest place to store info is in your brain.";
+r_text[13] = "Cryptomator is a great client-side file encryption software for all devices!";
+r_text[14] = "Don't use any security system connected to a server not owned by you.";
+r_text[15] = "F-Droid and Aurora Store are good Google Play Store alternatives.";
 var i = Math.floor(r_text.length * Math.random()); 
 document.write("<b>[Privacy Tip]</b> " + 
 r_text[i]  + "</FONT></center><br />"); 
