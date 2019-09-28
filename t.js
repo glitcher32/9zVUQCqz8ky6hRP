@@ -15,6 +15,7 @@ r_text[12] = "The safest place to store info is in your brain.";
 r_text[13] = "Cryptomator is a great client-side file encryption software for all devices!";
 r_text[14] = "Don't use any security system connected to a server not owned by you.";
 r_text[15] = "F-Droid and Aurora Store are good Google Play Store alternatives.";
+r_text[16] = "Signal and Wire are both great messaging apps.";
 var i = Math.floor(r_text.length * Math.random()); 
 document.write("<b>[Privacy Tip]</b> " + 
 r_text[i]  + "</FONT></center><br />"); 
