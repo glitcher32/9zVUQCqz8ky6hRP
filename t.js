@@ -19,6 +19,7 @@ r_text[16] = "Signal and Wire are both great messaging apps.";
 r_text[17] = "Invidious is a great alternative front-end to YouTube. Checkout invidio.us or invidious.snopyta.org";
 r_text[18] = "Never share ANY of your personal information online anywhere. Such as name, phone number, or even email.";
 r_text[19] = "Something as little as your name, username, email, phone number, etc. can be tracked to you and everything about you.";
+r_text[20] = "Tor Browser, Fennec F-Droid, and Privacy Browser are good Android browsers to use.";
 var i = Math.floor(r_text.length * Math.random()); 
 document.write("<b>[Privacy Tip]</b> " + 
 r_text[i]  + "</FONT></center><br />"); 
