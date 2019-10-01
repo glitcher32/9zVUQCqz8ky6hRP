@@ -16,6 +16,7 @@ r_text[13] = "Cryptomator is a great client-side file encryption software for al
 r_text[14] = "Don't use any security system connected to a server not owned by you.";
 r_text[15] = "F-Droid and Aurora Store are good Google Play Store alternatives.";
 r_text[16] = "Signal and Wire are both great messaging apps.";
+r_text[17] = "Invidious is a great alternative front-end to YouTube. Checkout invidio.us or invidious.snopyta.org";
 var i = Math.floor(r_text.length * Math.random()); 
 document.write("<b>[Privacy Tip]</b> " + 
 r_text[i]  + "</FONT></center><br />"); 
