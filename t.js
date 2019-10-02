@@ -25,6 +25,8 @@ r_text[22] = "NetGuard for Android is a easy way to block apps from accessing yo
 r_text[23] = "Your ISP (Internet Service Provider) can see when you're connected to Tor. Use Tor Browser + Orbot";
 r_text[24] = "NextCloud can be a great, but use a trusted provider, or better yet, host one yourself.";
 r_text[25] = "You can use APK Editor Pro or LuckyPatcher to remove trackers from apps.";
+r_text[26] = "A good alternative to Windows 10 is Qubes OS.";
+r_text[27] = "Use SearX, StartPage, DuckDuckGo, or Qwant as your search engine. Don't use Google/Bing/Yahoo/Yandex.";
 var i = Math.floor(r_text.length * Math.random()); 
 document.write("<b>[Privacy Tip]</b> " + 
 r_text[i]  + "</FONT></center><br />"); 
