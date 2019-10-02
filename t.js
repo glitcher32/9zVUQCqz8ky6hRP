@@ -21,6 +21,7 @@ r_text[18] = "Never share ANY of your personal information online anywhere. Such
 r_text[19] = "Something as little as your name, username, email, phone number, etc. can be tracked to you and everything about you.";
 r_text[20] = "Tor Browser, Fennec F-Droid, and Privacy Browser are good Android browsers to use.";
 r_text[21] = "If you download torrents, you're download history might be public! Check it out at iknowwhatyoudownload.com";
+r_text[22] = "NetGuard for Android is a easy way to block apps from accessing your internet. Check their website out at netguard.me";
 var i = Math.floor(r_text.length * Math.random()); 
 document.write("<b>[Privacy Tip]</b> " + 
 r_text[i]  + "</FONT></center><br />"); 
