@@ -28,6 +28,7 @@ r_text[25] = "You can use APK Editor Pro or LuckyPatcher to remove trackers from
 r_text[26] = "A good alternative to Windows 10 is Qubes OS.";
 r_text[27] = "Use SearX, StartPage, DuckDuckGo, or Qwant as your search engine. Don't use Google/Bing/Yahoo/Yandex.";
 r_text[28] = "CryptPad is a end-to-end encrypted alternative for office tools such as text editors, presentations, and more.";
+r_text[29] = "Use PrivateBin as a PasteBin alternative. It has zero knowledge of pasted data and is encrypted. Goto bin.privacytools.io";
 var i = Math.floor(r_text.length * Math.random()); 
 document.write("<b>[Privacy Tip]</b> " + 
 r_text[i]  + "</FONT></center><br />"); 
