@@ -30,7 +30,7 @@ r_text[27] = "Use SearX, StartPage, DuckDuckGo, or Qwant as your search engine. 
 r_text[28] = "CryptPad is a end-to-end encrypted alternative for office tools such as text editors, presentations, and more.";
 r_text[29] = "Use PrivateBin as a PasteBin alternative. It has zero knowledge of pasted data and is encrypted. Goto bin.privacytools.io";
 r_text[30] = "Firefox Send is a good place for end-to-end encrypted file sharing. Check it out at send.firefox.com";
-r_text[30] = "If you want to keep something secret, don't share it online, well or on a computer period.";
+r_text[31] = "If you want to keep something secret, don't share it online, well or on a computer period.";
 var i = Math.floor(r_text.length * Math.random()); 
 document.write("<b>[Privacy Tip]</b> " + 
 r_text[i]  + "</FONT></center><br />"); 
