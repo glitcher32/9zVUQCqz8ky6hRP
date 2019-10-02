@@ -23,6 +23,7 @@ r_text[20] = "Tor Browser, Fennec F-Droid, and Privacy Browser are good Android 
 r_text[21] = "If you download torrents, you're download history might be public! Check it out at iknowwhatyoudownload.com";
 r_text[22] = "NetGuard for Android is a easy way to block apps from accessing your internet. Check their website out at netguard.me";
 r_text[23] = "Your ISP (Internet Service Provider) can see when you're connected to Tor. Use Tor Browser + Orbot";
+r_text[24] = "NextCloud can be a great, but use a trusted provider, or better yet, host one yourself.";
 var i = Math.floor(r_text.length * Math.random()); 
 document.write("<b>[Privacy Tip]</b> " + 
 r_text[i]  + "</FONT></center><br />"); 
