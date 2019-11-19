@@ -1,0 +1,168 @@
+/***************************** DLBOX *************/
+#dlbox {
+  margin:auto;
+  padding:4px;
+  background:#F6F6F6;
+  clear:both;
+  border:1px solid #ccc;
+  position: relative;
+  height:auto;
+  width:95%;
+  max-width:460px;
+}
+#dlbox h4 {
+  font-size:20px;
+  font-family: sans-serif;
+  padding:10px;
+  text-align:center;
+  height:auto;
+  margin: auto;
+}
+#dlbox h5 {
+  font-size:20px;
+  font-family: sans-serif;
+  padding:10px;
+  text-align:left;
+  color:#e91414;
+height:auto;
+}
+#dlbox ul {
+  padding:0;
+  margin:10px 0;
+  color:#b30000;
+}
+#dlbox ul.dl li {
+  background:#EDEDED;
+  list-style-type:disc;
+  list-style-image:url('/images/dl-icon2.png') ;
+  list-style-position:inside;
+  border:#ff0000 solid 2px;
+  margin-bottom:5px;
+  padding:3px 0;
+}
+#dlbox ul.dl li:hover {
+  background:#EDEDED;
+  list-style-type:disc;
+  list-style-image:url('/images/dl-icon1.png') ;
+  list-style-position:inside;
+  border:#ff0000 solid 2px;
+  margin-bottom:5px;
+  padding:3px 0;
+}
+#dlbox ul.dl a li{
+  position:relative;
+  background:#b30000;
+  color:#fff;
+  font-weight:bold;
+  font-family: sans-serif;
+}
+#dlbox ul.dl a li:hover{
+  background:#F9F9F9;
+  color:#4D4D4D;
+}
+#dlbox ul.mirror li {
+  background:#EDEDED;
+  list-style-type:disc;
+  list-style-image:url('/images/dl-icon2.png') ;
+  list-style-position:inside;
+  border:#3b8dbd solid 2px;
+  margin-bottom:5px;
+  padding:3px 0;
+}
+#dlbox ul.mirror li:hover {
+  background:#EDEDED;
+  list-style-type:disc;
+  list-style-image:url('/images/dl-icon1.png') ;
+  list-style-position:inside;
+  border:#3b8dbd solid 2px;
+  margin-bottom:5px;
+  padding:3px 0;
+}
+#dlbox ul.mirror a li{
+  position:relative;
+  background:#3297d2;
+  color:#fff;
+  font-weight:bold;
+  font-family: sans-serif;
+}
+#dlbox ul.mirror a li:hover{
+  background:#F9F9F9;
+  color:#4D4D4D;
+}
+.txt-dl-list{
+  color:#4d4d4d;
+}
+#dlbox .dl-link li {
+  display: inline;
+  margin-left:5px;
+  padding-left:5px;
+  border:5px solid #fff;
+}
+#dlbox .dl-link li:first-child {
+  margin:0;
+  padding:0;
+  border:none;
+}
+#dlbox .dl-list {
+  background:#EDEDED;
+}
+.dl-size {
+  list-style:inside disc;
+  list-style-image:url('/images/size.png') ;
+  list-style-position:inside;
+  padding-left:2px;
+  font-family: sans-serif;
+}
+.dl-key {
+  list-style:inside disc;
+  list-style-image:url('/images/key.png') ;
+  list-style-position:inside;
+  padding-left:2px;
+  font-family: sans-serif;
+}
+.dl-version {
+  list-style:inside disc;
+  list-style-image:url('/images/version.png') ;
+  list-style-position:inside;
+  padding-left:2px;
+  font-family: sans-serif;
+}
+.dl-update {
+  list-style:inside disc;
+  list-style-image:url('/images/update.png') ;
+  list-style-position:inside;
+  padding-left:2px;
+  font-family: sans-serif;
+}
+}
+#dlbox .dl-list li{
+  background:#EDEDED;
+  line-height:20px;
+}
+#dlbox a {
+  text-decoration: none;
+  color:#ff0000;
+  padding:3px 0;
+  line-height:30px;
+}
+#dlbox .qr {
+  display:none;
+  float:right;
+  bottom:6px;
+  right:6px;
+  box-shadow: 0 0 2px 0 #999;
+}
+@media only screen and (max-width: 720px) {
+        .qr { display: none; }
+}
+.g-play {
+  display: block;
+  background: url("/images/g-play.png") no-repeat scroll transparent;
+  background-position: 0px -15px;
+  width:150px;height:54px;
+}
+.g-play:hover {
+  background: url("/images/g-play.png") no-repeat scroll transparent;
+  background-position: 0px -82px;
+  width:150px;height:54px;
+}
