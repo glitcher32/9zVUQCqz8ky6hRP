@@ -31,6 +31,9 @@ r_text[28] = "CryptPad is a end-to-end encrypted alternative for office tools su
 r_text[29] = "Use PrivateBin as a PasteBin alternative. It has zero knowledge of pasted data and is encrypted. Goto bin.privacytools.io";
 r_text[30] = "Firefox Send is a good place for end-to-end encrypted file sharing. Check it out at send.firefox.com";
 r_text[31] = "If you want to keep something secret, don't share it online, well or on a computer period.";
+r_text[32] = "AdGuard is a great ad/tracker blocker for your devices. It can even block internet access from apps.";
+r_text[33] = "Use simplewall to block all internet access from your Windows computer.";
+r_text[34] = "Check out my privacy guide for Android. It has useful apps, links, etc. for all devices, not just Android related.";
 var i = Math.floor(r_text.length * Math.random()); 
 document.write("<b>[Privacy Tip]</b> " + 
 r_text[i]  + "</FONT></center><br />"); 
