@@ -62,7 +62,17 @@
 <p style="text-align: center;">The notification feature will NOT work on Android v8.1 or up, but anything lower should be fine.</p>
               </div>
 	<br> </br>
-	<p style="text-align: center;"><strong><span style="color: #ff0000;">NEWS: <span style="color: #000000;">"Google Confirms Android Camera Security Threat: &lsquo;Hundreds Of Millions&rsquo; Of Users Affected" <a href="https://www.forbes.com/sites/daveywinder/2019/11/19/google-confirms-android-camera-security-threat-hundreds-of-millions-of-users-affected" target="_blank" rel="noopener"><span style="text-decoration: underline; color: #ff0000;">Read more</span></a></span></span></strong></p>
+<p style="text-align: center;"><strong><span style="color: #ff0000;">NEWS: <span style="color: #000000;">"Google Confirms Android Camera Security Threat: &lsquo;Hundreds Of Millions&rsquo; Of Users Affected" </span></span></strong><a class="confirmation" href="https://www.forbes.com/sites/daveywinder/2019/11/19/google-confirms-android-camera-security-threat-hundreds-of-millions-of-users-affected"><span style="color: #ff0000;"><span style="text-decoration: underline;"><strong>Read More</strong></span></span></a></p>
+
+<script type="text/javascript">
+    var elems = document.getElementsByClassName('confirmation');
+    var confirmIt = function (e) {
+        if (!confirm('Are you sure you want to view the news article located on forbes.com? Their website is filled with ads/trackers.')) e.preventDefault();
+    };
+    for (var i = 0, l = elems.length; i < l; i++) {
+        elems[i].addEventListener('click', confirmIt, false);
+    }
+</script>
 <br> </br>
 
 <div id="dlbox" >	
