@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="AngularApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="/loading/please-wait.css" rel="stylesheet">
+    <link href="/loading/css/default.css" rel="stylesheet">
+  </head>
+  <body ng-controller="MainCtrl">
+    <div class="inner" ng-view>
+    </div>
+    <script type="text/javascript" src="/loading/please-wait.css"></script>
+    <script type="text/javascript">
+      window.loading_screen = window.pleaseWait({
+        logo: "logo.png",
+        backgroundColor: '#b30000',
+        loadingHtml: "<p class='loading-message'>A good day to you fine user!</p>"
+      });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <!-- If we include the rest of our JS after we call pleaseWait, users get a loading page while it downloads. 
+    Of course, this is optional and up to you. It may be desired if your combined JS is of a larger size. If not,
+    feel free to include PleaseWait in your normal minified JS file, and call pleaseWait when first possible. -->
+    <script src="/loading/default.min.js"></script>
+  </body>
+</html>
 
+<script>
+var loading_screen = pleaseWait({
+  logo: "logo.png",
+  backgroundColor: '#f46d3b',
+  loadingHtml: "<div class='sk-spinner sk-spinner-wave'><div class='sk-rect1'></div><div class='sk-rect2'></div><div class='sk-rect3'></div><div class='sk-rect4'></div><div class='sk-rect5'></div></div>"
+});
+</script>
