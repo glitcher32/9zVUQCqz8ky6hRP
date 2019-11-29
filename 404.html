@@ -238,8 +238,8 @@ body {
   height: 60%;
   width: 20%;
   background: linear-gradient(0deg, transparent, #1a1a1a 50%), #808080;
-  border-left: 1px solid #4d4d4d;
-  border-right: 1px solid #333;
+  border-left: 1px solid #ff0000;
+  border-right: 1px solid #ff0000;
   border-radius: 0 0 25% 25%;
   top: 50%;
   left: 50%;
@@ -297,7 +297,7 @@ body {
   width: 100%;
 }
 .truck__body--top {
-  background: linear-gradient(90deg, #f4f1f1, #bfbfbf 50%), #e8e3e3;
+  background: linear-gradient(90deg, #b30000, #ff0000 50%), #b30000;
   height: 33%;
   width: 100%;
   top: 0;
@@ -377,7 +377,7 @@ body {
           transform-origin: top left;
   -webkit-transform: rotate(1deg);
           transform: rotate(1deg);
-  background: #808080;
+  background: #ff0000;
 }
 .truck__underpanel {
   background: #080808;
@@ -389,10 +389,10 @@ body {
   clip-path: polygon(2% 0, 14% 100%, 88% 100%, 99% 60%, 99% 40%);
 }
 .truck__mid-body {
-  --groove: #262626;
+  --groove: #b30000;
   height: 100%;
   width: 100%;
-  background: linear-gradient(84deg, transparent, transparent 36.75%, var(--groove) 36.75%, var(--groove) 37.25%, transparent 37.25%), linear-gradient(83deg, transparent, transparent 55.75%, var(--groove) 55.75%, var(--groove) 56.25%, transparent 56.25%), linear-gradient(88deg, transparent, transparent 75%, var(--groove) 75%, var(--groove) 75.5%, transparent 75.5%), linear-gradient(90deg, transparent, transparent 96%, #1f1f1f 96%), linear-gradient(90deg, transparent, #262626), #333;
+  background: linear-gradient(84deg, transparent, transparent 36.75%, var(--groove) 36.75%, var(--groove) 37.25%, transparent 37.25%), linear-gradient(83deg, transparent, transparent 55.75%, var(--groove) 55.75%, var(--groove) 56.25%, transparent 56.25%), linear-gradient(88deg, transparent, transparent 75%, var(--groove) 75%, var(--groove) 75.5%, transparent 75.5%), linear-gradient(90deg, transparent, transparent 96%, #ff0000 96%), linear-gradient(90deg, transparent, #ff0000), #b30000;
   -webkit-clip-path: polygon(0 0, 3% 100%, 80% 84%, 99.5% 78%, 100% 10%, 98% 0);
   clip-path: polygon(0 0, 3% 100%, 80% 84%, 99.5% 78%, 100% 10%, 98% 0);
 }
@@ -404,7 +404,7 @@ body {
   height: 4%;
   left: 38%;
   top: 6%;
-  border: 1px solid #4d4d4d;
+  border: 1px solid #b30000;
   border-radius: 25%;
 }
 .truck__mid-body:before {
@@ -548,3 +548,48 @@ body {
 <div class="truck__indicator"></div>
 <div class="truck__foglight"></div>
 </div>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float: left;
+  width: 20%;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.right {
+  background-color: lightblue;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
