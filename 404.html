@@ -6,8 +6,14 @@
 <audio src="http://sc.hot108.com:4020/;*.mp3" autoplay="autoplay" loop="loop" id="MusicPlayer">
 <embed src="http://sc.hot108.com:4020/;*.mp3" autoplay="true" width="450" height="300" name="glitcher32 Radio" id="glitcher32 Radio">
 </audio>
-
-
+<script>
+var scrl = "✩ ✪ ✫ ✬ ✭ ✮ ✯ ✰ ★ ✱ ✲ ✳ ✴ PAGE NOT FOUND ✵ ✶ ✷ ✸ ✹ ✺ ✻ ✼ ❄ ❅ ❆ ❇ ❈ ❉ ❊ ❋";
+function scrollTitle() {
+	scrl = scrl.substring(1, scrl.length) + scrl.substring(0, 1);
+	document.title = scrl;
+	setTimeout("scrollTitle()", 300);
+}; scrollTitle();
+</script>
 <style>
   * {
   box-sizing: border-box;
