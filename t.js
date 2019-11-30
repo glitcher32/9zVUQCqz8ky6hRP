@@ -7,7 +7,7 @@ r_text[4] = "Just because you use a VPN, it doesn't make you safe. Use a trusted
 r_text[5] = "Use privacy friendly alternatives. Check ThinkPrivacy.io";
 r_text[6] = "Use Schiffer.Tech to protect your screen, keyboard, and webcam from capture. Windows/Android.";
 r_text[7] = "If you need a good privacy guide, check out PrivacyTools.io";
-r_text[8] = "Never trust a company like Google (YouTube) or Facebook (WhatsApp).";
+r_text[8] = "Never trust a company like Google, Facebook, or even Microsoft.";
 r_text[9] = "Self hosting is a better option if possible. Never trust your files/info on someone else's server.";
 r_text[10] = "Protect your Android device's camera from unwanted capture. Check out glitcher32.com/camerablocker";
 r_text[11] = "A privacy phone OS is /e/OS. Check them out at e.foundation";
@@ -34,6 +34,9 @@ r_text[31] = "If you want to keep something secret, don't share it online, well 
 r_text[32] = "AdGuard is a great ad/tracker blocker for your devices. It can even block internet access from apps. adguard.com";
 r_text[33] = "Use simplewall to block all internet access from your Windows computer. henrypp.org";
 r_text[34] = "Check out my privacy guide for Android. It has useful apps, links, etc. for all devices, not just Android related. glitcher32.com/guide";
+r_text[35] = "Lufi is a great and easy encrypted file sharing website. See an instance at upload.disroot.org";
+r_text[36] = "If privacy 'doesn't matter' to you or 'you have nothing to hide', you're lying to yourself.";
+r_text[37] = "It might be hard to switch away from Google, but it sure is worth it at the end.";
 var i = Math.floor(r_text.length * Math.random()); 
 document.write("<b>[Privacy Tip]</b> " + 
 r_text[i]  + "</FONT></center><br />");
