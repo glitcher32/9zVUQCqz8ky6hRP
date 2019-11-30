@@ -37,6 +37,7 @@ r_text[34] = "Check out my privacy guide for Android. It has useful apps, links,
 r_text[35] = "Lufi is a great and easy encrypted file sharing website. See an instance at upload.disroot.org";
 r_text[36] = "If privacy 'doesn't matter' to you or 'you have nothing to hide', you're lying to yourself.";
 r_text[37] = "It might be hard to switch away from Google, but it sure is worth it at the end.";
+r_text[38] = "Easily encrpyt/decrypt files online at glitcher32.com/encrypt (Use #inputPassword=EXAMPLE to auto fill the password box.)";
 var i = Math.floor(r_text.length * Math.random()); 
 document.write("<b>[Privacy Tip]</b> " + 
 r_text[i]  + "</FONT></center><br />");
