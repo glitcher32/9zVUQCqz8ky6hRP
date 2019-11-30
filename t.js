@@ -36,4 +36,5 @@ r_text[33] = "Use simplewall to block all internet access from your Windows comp
 r_text[34] = "Check out my privacy guide for Android. It has useful apps, links, etc. for all devices, not just Android related. glitcher32.com/guide";
 var i = Math.floor(r_text.length * Math.random()); 
 document.write("<center><div class="info"><b>[Privacy Tip]</b> " + 
-r_text[i]  + "</FONT></center><br /></div></center>"); 
+r_text[i]  + "</FONT></center><br />" + 
+document.write("</div></center>");
