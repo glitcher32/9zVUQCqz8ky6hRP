@@ -43,12 +43,26 @@
                 width:76px;
             }
         </style>
+	       <style>
+@media all and (min-width: 768px) {
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+</style>
     </head>
     <body>
         <div class="container mt-3">
             <div class="d-inline-block">
 		    <p style="text-align: center;"><img src="../christmas.png" alt="" width="315" height="79" />&trade;</p>
-                <img id="weather-img" class="img-fluid rounded" src="https://wttr.in/Sacramento_2Funpq_transparency=200_lang=en.png" alt="Current weather in London">
+                <div class="hidden-mobile"><img id="weather-img" class="img-fluid rounded" src="https://wttr.in/Sacramento_2Fupq_transparency=200_lang=en.png" alt="Current weather in London"></div>
+		    <div class="hidden-desktop"><img id="weather-img" class="img-fluid rounded" src="https://wttr.in/Sacramento_2Funpq_transparency=200_lang=en.png" alt="Current weather in London"></div>
                 <form id="weather-form">
                     <div class="input-group mt-1">
                         <input id="weather-input" class="form-control" type="text" placeholder="Weather in..." aria-label="Weather in...">
