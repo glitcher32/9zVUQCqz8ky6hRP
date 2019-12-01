@@ -43,12 +43,25 @@
                 width:76px;
             }
         </style>
+	<style>
+@media all and (min-width: 768px) {
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+@media all and (max-width: 767px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+</style>
     </head>
     <body>
         <div class="container mt-3">
             <div class="d-inline-block">
 		    <p style="text-align: center;"><img src="/christmas.png" alt="" width="315" height="79" />&trade;</p>
-                <img id="weather-img" class="img-fluid rounded" src="https://wttr.in/Sacramento_2Fmpq_transparency=200_lang=en.png" alt="Current weather in London">
+                <div class="hidden-mobile"><img id="weather-img" class="img-fluid rounded" src="https://wttr.in/Paris_2Fmpq_transparency=200_lang=en.png" alt="Current weather in London"></div>
+		    <div class="hidden-desktop"><img id="weather-img" class="img-fluid rounded" src="https://wttr.in/Paris_2Fmnpq_transparency=200_lang=en.png" alt="Current weather in London"></div>
                 <form id="weather-form">
                     <div class="input-group mt-1">
                         <input id="weather-input" class="form-control" type="text" placeholder="Weather in..." aria-label="Weather in...">
@@ -64,3 +77,38 @@
 </html>
 <br> </br>
 <center><a href="https://glitcher32.com/weather/" class="btn btn-primary" type="button">Need USCS/Fahrenheit? Click Here</a></center>
+<br> </br>
+<p style="text-align: center;"><span style="color: #ffffff;"><strong>Search Examples:<br /></strong></span></p>
+<table style="height: 217px; background-color: #111111; border-color: #000000; margin-left: auto; margin-right: auto;" border="2" width="351">
+<tbody>
+<tr>
+<td style="width: 167.5px; text-align: left;"><strong><span style="color: #ffffff;">Paris</span></strong></td>
+<td style="width: 167.5px;"><span style="color: #ffffff;"># City Name</span></td>
+</tr>
+<tr>
+<td style="width: 167.5px;"><strong><span style="color: #ffffff;">~Eiffel+tower</span></strong></td>
+<td style="width: 167.5px;"><span style="color: #ffffff;"># Any Location</span></td>
+</tr>
+<tr>
+<td style="width: 167.5px;"><strong><span style="color: #ffffff;">Москва</span></strong></td>
+<td style="width: 167.5px;"><span style="color: #ffffff;"># Unicode name of any location in any language</span></td>
+</tr>
+<tr>
+<td style="width: 167.5px;"><strong><span style="color: #ffffff;">muc</span></strong></td>
+<td style="width: 167.5px;"><span style="color: #ffffff;"># Airport code (3 letters)</span></td>
+</tr>
+<tr>
+<td style="width: 167.5px;"><strong><span style="color: #ffffff;">@glitcher32.com</span></strong></td>
+<td style="width: 167.5px;"><span style="color: #ffffff;"># Domain Name</span></td>
+</tr>
+<tr>
+<td style="width: 167.5px;"><strong><span style="color: #ffffff;">94107</span></strong></td>
+<td style="width: 167.5px;"><span style="color: #ffffff;"># Area Codes</span></td>
+</tr>
+<tr>
+<td style="width: 167.5px;"><strong><span style="color: #ffffff;">-78.46,106.79</span></strong></td>
+<td style="width: 167.5px;"><span style="color: #ffffff;"># GPS Coordinates</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
