@@ -20,5 +20,5 @@ document.getElementById('weather-form').onkeypress = function(event) {
     }
 }
 
-var weatherOptions = '0pq_transparency=200_lang=en';
+var weatherOptions = '2Fupq_transparency=200_lang=en';
 var weatherImgAlt = 'Current weather in ';
