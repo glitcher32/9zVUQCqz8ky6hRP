@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>Search</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />	
+	
+
+    <!-- Privacy -->
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="x-dns-prefetch-control" content="off">
+    <meta name="format-detection" content="telephone=no">
+
+<link rel="shortcut icon" type="image/x-icon" href="../glitcher32Security.ico">
+<link rel="apple-touch-icon" href="../glitcher32Security.ico">
+	<link rel="icon" type="image/x-icon" href="/glitcher32Security.ico" />
+<!-- default favicon -->
+<link rel="shortcut icon" href="../glitcher32Security.ico" type="image/x-icon">
+
+<!-- wideley used favicon -->
+<link rel="icon" href="../glitcher32Security.ico" sizes="32x32" type="image/x-icon">
+ 
+<!-- for apple mobile devices -->
+<link rel="apple-touch-icon-precomposed" href="../glitcher32Security.ico" type="image/x-icon" sizes="152x152">
+<link rel="apple-touch-icon-precomposed" href="../glitcher32Security.ico" type="image/x-icon" sizes="120x120">
+ 
+<!-- google tv favicon -->
+<link rel="icon" href="../glitcher32Security.ico" sizes="96x96" type="image/x-icon">
+<meta name="theme-color" content="#ff0000" />
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#ff0000">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#ff0000">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="red">
+<meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+       <body background="../back.jpg"> 
+
+
+
+<a href="https://glitcher32.com/"><img src="https://glitcher32.com/logo.png" alt="" width="99" height="28" /></a>
+<input type="text" id="what" placeholder="  glitcher32 " >
+<input id="search-btn" type="button" onclick="search()" value="Search">
+<a href="https://glitcher32.com/weather/"><span style="text-decoration: underline;"><span style="color: #ffff; text-decoration: underline;">Weather</span></span></a>
+</form>
+</body>
+</html>
+<br>
+<br>
+<span id="resultarea"></span>
+
+<script>
+function search(){
+let answer='';
+let apiurl = 'https://ansero.eu.org/api/ansero.php';
+let keyword = document.getElementById('what').value;
+fetch(apiurl,{
+	method:'POST', mode:'cors',
+	headers:{'Content-Type':'application/x-www-form-urlencoded'},
+	body:'t=json&l=en-US&q='+encodeURI(keyword)// change en-US to other if you want (such as 'de')
+}).then(r=>r.json()).then(r=>{
+
+r.res.forEach(x=>{
+answer+='<span style="color: #fff;"><a href="'+x.url+'" span style="color: #b30000;">'+x.title+'</a><br>'+x.desc+'<br><br>';
+});
+
+document.getElementById('resultarea').innerHTML=answer;
+
+
+}).catch(e=>console.log(e));
+}
+</script>
+
+<body bgcolor="#1111111">
+
+
+
+
+
+
+
+
+
+<style>
+  #search-btn {
+background:#b30000;
+color:white;
+font: 'trebuchet ms', trebuchet;
+padding:10px 20px;
+border-radius:0 10px 10px 0;
+-moz-border-radius:0 10px 10px 0;
+-webkit-border-radius:0 10px 10px 0;
+-o-border-radius:0 10px 10px 0;
+border:0 none;
+font-weight:bold;
+}
+
+#search-btn:hover {
+  background-color: #ff0000;
+  color: white;
+}
+ 
+#what {
+background: #eee;
+padding:10px;
+ border-radius:10px 0 0 10px;
+-moz-border-radius:10px 0 0 10px;
+-webkit-border-radius:10px 0 0 10px;
+-o-border-radius:10px 0 0 10px;
+border:0 none;
+width:250px;
+ }
+</style>
+
+
+
+<div class="snow" />
+<style>
+.editor-stage .snow {
+  height:50px;
+  background: #fff;
+}
+.snow{
+  position:fixed;
+  pointer-events:none;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  height:100vh;
+  background: none;
+  background-image: url('/images/s1.png'), url('/images/s2.png'), url('/images/s3.png');
+  z-index:100;
+  -webkit-animation: snow 10s linear infinite;
+  -moz-animation: snow 10s linear infinite;
+  -ms-animation: snow 10s linear infinite;
+  animation: snow 10s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+</style>
