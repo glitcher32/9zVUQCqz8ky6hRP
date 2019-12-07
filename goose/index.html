@@ -62,7 +62,7 @@ fetch(apiurl,{
 }).then(r=>r.json()).then(r=>{
 
 r.res.forEach(x=>{
-answer+='<span style="color: #fff;"><a href="'+x.url+'" span style="color: #b30000;">'+x.title+'</a><br>'+x.desc+'<br><br>';
+answer+='<span style="color: #fff;"><a href="'+x.url+'" span style="color: #b30000;">'+x.title+'</a><br>'+x.desc+'<br><span style="color: #ff0000;"<br>'+x.url+'<br><br>';
 });
 
 document.getElementById('resultarea').innerHTML=answer;
