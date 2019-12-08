@@ -90,12 +90,18 @@ function search() {
 			answer += '</span><br><br>';
 		}
 		r.res.forEach(x => {
+
+let iHateYou=false;
+if (['google.com','yandex.ru','startpage.com'].includes(x.dom)){iHateYou=true;}
+if (['',''].includes(x.fqdn)){iHateYou=true;}
+if (!iHateYou){
 			answer += '<span class="srch_sect">';
 			answer += '<img src="' + favurl + (x.url.startsWith('https:') ? '1-' : '0-') + x.fqdn + '"> ';
 			answer += '<a href="' + x.url + '" class="srch_link">' + x.title + '</a><br>';
 			answer += '' + x.desc + '<br>';
 			answer += '<span class="srch_url">' + x.url + '</span></span>';
 			answer += '<br><br>';
+}
 		});
 		document.getElementById('resultarea').innerHTML = answer;
 	}).catch(e => console.log(e));
@@ -110,6 +116,7 @@ function search() {
          <input type="submit" value="Search">
 <br><a href="https://glitcher32.com/weather/"><span style="text-decoration: underline;"><span style="color: #ffff; text-decoration: underline;">[Weather]</span></span></a>
 <a href="https://glitcher32.com/encrypt/"><span style="text-decoration: underline;"><span style="color: #ffff; text-decoration: underline;">[Encrypt Files]</span></span></a>
+<a href="https://glitcher32.com/editor/"><span style="text-decoration: underline;"><span style="color: #ffff; text-decoration: underline;">[HTML Editor]</span></span></a>
 
       </form>
       <br>
