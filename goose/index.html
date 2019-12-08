@@ -1,6 +1,6 @@
 <html>
-<head>
-<title>Search</title>
+   <head>
+      <title>Search</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />	
 	
 
@@ -34,85 +34,89 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="red">
 <meta name="apple-mobile-web-app-capable" content="yes">
-</head>
-       <body background="../back.jpg"> 
 
-
-
-<a href="https://glitcher32.com/"><img src="https://glitcher32.com/logo.png" alt="" width="99" height="28" /></a>
-<input type="text" id="what" placeholder="glitcher32 " >
-<input id="search-btn" type="button" onclick="search()" value="Search">
-<a href="https://glitcher32.com/weather/"><span style="text-decoration: underline;"><span style="color: #ffff; text-decoration: underline;">Weather</span></span></a>
-</form>
-</body>
-</html>
-<br>
-<br>
-<span id="resultarea"></span>
-
-<script>
-function search(){
-let answer='';
+      <style>
+body {
+	background: #111111
+}
+input#what {
+	width: 80%
+}
+span.srch_sect {
+	color: #fff
+}
+a.srch_link {
+	color: #ff0000
+}
+span.srch_url {
+	color: #b30000
+}
+a[onclick] {
+	cursor: pointer
+}
+      </style>
+      <script>
 let apiurl = 'https://ansero.eu.org/api/ansero.php';
-let keyword = document.getElementById('what').value;
-fetch(apiurl,{
-	method:'POST', mode:'cors',
-	headers:{'Content-Type':'application/x-www-form-urlencoded'},
-	body:'t=json&l=en-US&q='+encodeURI(keyword)// change en-US to other if you want (such as 'de')
-}).then(r=>r.json()).then(r=>{
-
-r.res.forEach(x=>{
-answer+='<span style="color: #fff;"><a href="'+x.url+'" span style="color: #b30000;">'+x.title+'</a><br>'+x.desc+'<br><span style="color: #ff0000;"<br>'+x.url+'<br><br>';
-});
-
-document.getElementById('resultarea').innerHTML=answer;
-
-
-}).catch(e=>console.log(e));
+let favurl = 'https://ansero.eu.org/api/favicon.php?f=';
+function seachit(key) {
+	document.getElementById('what').value = key;
+	search();
 }
-</script>
-
-<body bgcolor="#1111111">
-
-
-
-
-
-
-
-
-
-<style>
-  #search-btn {
-background:#b30000;
-color:white;
-font: 'trebuchet ms', trebuchet;
-padding:10px 20px;
-border-radius:0 10px 10px 0;
--moz-border-radius:0 10px 10px 0;
--webkit-border-radius:0 10px 10px 0;
--o-border-radius:0 10px 10px 0;
-border:0 none;
-font-weight:bold;
+function search() {
+	let answer = '',
+		keyword = document.getElementById('what').value;
+	if (keyword.length < 2) {
+		return false;
+	}
+	fetch(apiurl, {
+		method: 'POST',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded'
+		},
+		body: 't=json&l=en-US&q=' + encodeURI(keyword)
+	}).then(r => r.json()).then(r => {
+		if (r.info.desc != undefined) {
+			answer += '<span class="srch_sect">';
+			answer += '' + r.info.desc + '<br>';
+			answer += '<a href="' + r.info.url + '" class="srch_link">' + r.info.title + '</a>';
+			answer += '</span><br><br>';
+		}
+		if (r.sgst.length > 0) {
+			answer += '<span class="srch_sect">Search other: <br>';
+			r.sgst.forEach(x => {
+				answer += '[<a class="srch_link" onclick="seachit(\'' + x + '\');return false;">' + x + '</a>]<br>';
+			});
+			answer += '</span><br><br>';
+		}
+		r.res.forEach(x => {
+			answer += '<span class="srch_sect">';
+			answer += '<img src="' + favurl + (x.url.startsWith('https:') ? '1-' : '0-') + x.fqdn + '"> ';
+			answer += '<a href="' + x.url + '" class="srch_link">' + x.title + '</a><br>';
+			answer += '' + x.desc + '<br>';
+			answer += '<span class="srch_url">' + x.url + '</span></span>';
+			answer += '<br><br>';
+		});
+		document.getElementById('resultarea').innerHTML = answer;
+	}).catch(e => console.log(e));
+	return false;
 }
+      </script>
+   </head>
+   <body>
+      <form action="#" onsubmit="return search()">
+<a href="https://glitcher32.com/"><img src="https://glitcher32.com/logo.png" alt="" width="99" height="28" /></a><br>
+         <input type="text" id="what" required placeholder="Search anything...">
+         <input type="submit" value="Search">
+<br><a href="https://glitcher32.com/weather/"><span style="text-decoration: underline;"><span style="color: #ffff; text-decoration: underline;">[Weather]</span></span></a>
+<a href="https://glitcher32.com/encrypt/"><span style="text-decoration: underline;"><span style="color: #ffff; text-decoration: underline;">[Encrypt Files]</span></span></a>
 
-#search-btn:hover {
-  background-color: #ff0000;
-  color: white;
-}
- 
-#what {
-background: #eee;
-padding:10px;
- border-radius:10px 0 0 10px;
--moz-border-radius:10px 0 0 10px;
--webkit-border-radius:10px 0 0 10px;
--o-border-radius:10px 0 0 10px;
-border:0 none;
-width:160px;
- }
-</style>
-
+      </form>
+      <br>
+      <br>
+      <span id="resultarea"></span>
+   </body>
+</html>
 
 
 <div class="snow" />
