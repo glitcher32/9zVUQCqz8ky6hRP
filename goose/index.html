@@ -119,6 +119,12 @@ r.res=[{url:'#',fqdn:'#',dom:'#',title:'★ Google is a devil!',desc:'Please tel
 		
 		r.res.forEach(x => {
 
+// if URL is youtube,
+if (/^https:\/\/www\.youtube\.com\/watch\?v=(.*)$/.test(x.url)){
+x.url = 'https://invidio.us/watch?' + x.url.split('/watch?')[1];// update URL
+x.fqdn = x.dom = 'invidio.us';
+}			
+			
 let iHateYou=false;
 if (['google.com','yandex.ru','startpage.com','cloudflare.com','bing.com','yahoo.com','aol.com','ask.com','facebook.com','instagram.com','snapchat.com','kik.com','tiktok.com'].includes(x.dom)){iHateYou=true;}
 if (['',''].includes(x.fqdn)){iHateYou=true;}
