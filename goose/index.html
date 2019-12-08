@@ -58,10 +58,15 @@ a[onclick] {
       <script>
 let apiurl = 'https://ansero.eu.org/api/ansero.php';
 let favurl = 'https://ansero.eu.org/api/favicon.php?f=';
+
+let blacklist_domain = ['aol.com', 'ask.com', 'bing.com', 'cloudflare.com', 'facebook.com', 'google.com', 'instagram.com', 'kik.com', 'snapchat.com', 'startpage.com', 'tiktok.com', 'yahoo.com', 'yandex.ru'];
+let blacklist_fqdn = [];
+
 function seachit(key) {
 	document.getElementById('what').value = key;
 	search();
 }
+
 function search() {
 	let answer = '',
 		keyword = document.getElementById('what').value;
@@ -90,52 +95,76 @@ function search() {
 			answer += '</span><br><br>';
 		}
 
-// "Insert" custom answer when keyword is X.
+		// String contains "email"
+		if (keyword.includes('email')) {
+			r.res = [{
+				url: 'https://tutanota.com/',
+				fqdn: 'tutanota.com',
+				dom: 'tutanota.com',
+				title: '★ Tutanota',
+				desc: 'Tutanota is the secure email service, built in Germany. Use encrypted emails on all devices with our open source email client, mobile apps & desktop clients.'
+			}].concat(r.res);
+		}
 
-// String contains "email"
-if (keyword.includes('email')){
-r.res=[{url:'https://tutanota.com/',fqdn:'tutanota.com',dom:'tutanota.com',title:'★ Tutanota',desc:'Tutanota is the secure email service, built in Germany. Use encrypted emails on all devices with our open source email client, mobile apps & desktop clients.'}].concat(r.res);
-}
+		// String includes "youtube"
+		if (/youtube/i.test(keyword)) {
+			r.res = [{
+				url: 'https://www.invidio.us/',
+				fqdn: 'www.invidio.us',
+				dom: 'invidio.us',
+				title: '★ Invidious',
+				desc: 'An alternative front-end to YouTube.'
+			}].concat(r.res);
+		}
 
-// String is "youtube"
-if (keyword == 'youtube'){
-r.res=[{url:'https://www.invidio.us/',fqdn:'invidio.us',dom:'invidio.us',title:'★ Invidious',desc:'An alternative front-end to YouTube.'}].concat(r.res);
-}
-		
-// String is "vpn"
-if (keyword == 'vpn'){
-r.res=[{url:'https://www.protonvpn.com/',fqdn:'protonvpn.com',dom:'protonvpn.com',title:'★ ProtonVPN',desc:'ProtonVPN is a security focused FREE VPN service, developed by CERN and MIT scientists. Use the web anonymously, unblock websites & encrypt your connection.'}].concat(r.res);
-}
+		// String is exactly "vpn"
+		if (/^vpn$/i.test(keyword)) {
+			r.res = [{
+				url: 'https://www.protonvpn.com/',
+				fqdn: 'www.protonvpn.com',
+				dom: 'protonvpn.com',
+				title: '★ ProtonVPN',
+				desc: 'ProtonVPN is a security focused FREE VPN service, developed by CERN and MIT scientists. Use the web anonymously, unblock websites & encrypt your connection.'
+			}].concat(r.res);
+		}
 
-// String is "cloudflare"
-if (keyword == 'cloudflare'){
-r.res=[{url:'https://codeberg.org/crimeflare/cloudflare-tor/',fqdn:'codeberg.org/crimeflare/cloudflare-tor',dom:'codeberg.org/crimeflare/cloudflare-tor',title:'★ AVOID CLOUDFLARE!',desc:'CloudFlare is just as bad as Google. Avoid them and any website that relies on them.'}].concat(r.res);
-}
+		// String includes "cloudflare"
+		if (/cloudflare/i.test(keyword)) {
+			r.res = [{
+				url: 'https://codeberg.org/crimeflare/cloudflare-tor/',
+				fqdn: 'codeberg.org',
+				dom: 'codeberg.org',
+				title: '★ AVOID CLOUDFLARE!',
+				desc: 'CloudFlare is just as bad as Google. Avoid them and any website that relies on them.'
+			}].concat(r.res);
+		}
 
-// String is "google"
-if (keyword == 'google'){
-r.res=[{url:'#',fqdn:'#',dom:'#',title:'★ Google is a devil!',desc:'Please tell me you dont use Google'}].concat(r.res);
-}
-		
+		// String includes "google"
+		if (/google/i.test(keyword)) {
+			r.res = [{
+				url: '#',
+				fqdn: '#',
+				dom: '#',
+				title: '★ Google is a devil!',
+				desc: 'Please tell me you don\'t use Google'
+			}].concat(r.res);
+		}
+
 		r.res.forEach(x => {
 
-// if URL is youtube,
-if (/^https:\/\/www\.youtube\.com\/watch\?v=(.*)$/.test(x.url)){
-x.url = 'https://invidio.us/watch?' + x.url.split('/watch?')[1];// update URL
-x.fqdn = x.dom = 'invidio.us';
-}			
-			
-let iHateYou=false;
-if (['google.com','yandex.ru','startpage.com','cloudflare.com','bing.com','yahoo.com','aol.com','ask.com','facebook.com','instagram.com','snapchat.com','kik.com','tiktok.com'].includes(x.dom)){iHateYou=true;}
-if (['',''].includes(x.fqdn)){iHateYou=true;}
-if (!iHateYou){
-			answer += '<span class="srch_sect">';
-			answer += '<img src="' + favurl + (x.url.startsWith('https:') ? '1-' : '0-') + x.fqdn + '"> ';
-			answer += '<a href="' + x.url + '" class="srch_link">' + x.title + '</a><br>';
-			answer += '' + x.desc + '<br>';
-			answer += '<span class="srch_url">' + x.url + '</span></span>';
-			answer += '<br><br>';
-}
+			if (/^https:\/\/www\.youtube\.com\/watch\?v=(.*)$/.test(x.url)) {
+				x.url = 'https://invidio.us/watch?' + x.url.split('/watch?')[1];
+				x.fqdn = x.dom = 'invidio.us';
+			}
+
+			if (!blacklist_domain.includes(x.dom) && !blacklist_fqdn.includes(x.fqdn)) {
+				answer += '<span class="srch_sect">';
+				answer += '<img src="' + favurl + (x.url.startsWith('https:') ? '1-' : '0-') + x.fqdn + '"> ';
+				answer += '<a href="' + x.url + '" class="srch_link">' + (x.mitm == 1 ? '[MITM!] ' : '') + x.title + '</a><br>';
+				answer += '' + x.desc + '<br>';
+				answer += '<span class="srch_url">' + x.url + '</span></span>';
+				answer += '<br><br>';
+			}
 		});
 		document.getElementById('resultarea').innerHTML = answer;
 	}).catch(e => console.log(e));
