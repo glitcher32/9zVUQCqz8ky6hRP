@@ -92,7 +92,7 @@ function search() {
 		r.res.forEach(x => {
 
 let iHateYou=false;
-if (['google.com','yandex.ru','startpage.com','cloudflare.com','bing.com','yahoo.com','aol.com','ask.com'].includes(x.dom)){iHateYou=true;}
+if (['google.com','yandex.ru','startpage.com','cloudflare.com','bing.com','yahoo.com','aol.com','ask.com','facebook.com','instagram.com','snapchat.com','kik.com','tiktok.com'].includes(x.dom)){iHateYou=true;}
 if (['',''].includes(x.fqdn)){iHateYou=true;}
 if (!iHateYou){
 			answer += '<span class="srch_sect">';
