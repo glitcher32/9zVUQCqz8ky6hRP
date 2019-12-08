@@ -101,7 +101,22 @@ r.res=[{url:'https://tutanota.com/',fqdn:'tutanota.com',dom:'tutanota.com',title
 if (keyword == 'youtube'){
 r.res=[{url:'https://www.invidio.us/',fqdn:'invidio.us',dom:'invidio.us',title:'★ Invidious',desc:'An alternative front-end to YouTube.'}].concat(r.res);
 }
+		
+// String is "vpn"
+if (keyword == 'vpn'){
+r.res=[{url:'https://www.protonvpn.com/',fqdn:'protonvpn.com',dom:'protonvpn.com',title:'★ ProtonVPN',desc:'ProtonVPN is a security focused FREE VPN service, developed by CERN and MIT scientists. Use the web anonymously, unblock websites & encrypt your connection.'}].concat(r.res);
+}
 
+// String is "cloudflare"
+if (keyword == 'cloudflare'){
+r.res=[{url:'https://codeberg.org/crimeflare/cloudflare-tor/',fqdn:'codeberg.org/crimeflare/cloudflare-tor',dom:'codeberg.org/crimeflare/cloudflare-tor',title:'★ AVOID CLOUDFLARE!',desc:'CloudFlare is just as bad as Google. Avoid them and any website that relies on them.'}].concat(r.res);
+}
+
+// String is "google"
+if (keyword == 'google'){
+r.res=[{url:'#',fqdn:'#',dom:'#',title:'★ Google is a devil!',desc:'Please tell me you dont use Google'}].concat(r.res);
+}
+		
 		r.res.forEach(x => {
 
 let iHateYou=false;
