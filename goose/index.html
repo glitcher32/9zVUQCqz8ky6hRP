@@ -89,6 +89,19 @@ function search() {
 			});
 			answer += '</span><br><br>';
 		}
+
+// "Insert" custom answer when keyword is X.
+
+// String contains "email"
+if (keyword.includes('email')){
+r.res=[{url:'https://tutanota.com/',fqdn:'tutanota.com',dom:'tutanota.com',title:'★ Tutanota',desc:'Tutanota is the secure email service, built in Germany. Use encrypted emails on all devices with our open source email client, mobile apps & desktop clients.'}].concat(r.res);
+}
+
+// String is "youtube"
+if (keyword == 'youtube'){
+r.res=[{url:'https://www.invidio.us/',fqdn:'invidio.us',dom:'invidio.us',title:'★ Invidious',desc:'An alternative front-end to YouTube.'}].concat(r.res);
+}
+
 		r.res.forEach(x => {
 
 let iHateYou=false;
