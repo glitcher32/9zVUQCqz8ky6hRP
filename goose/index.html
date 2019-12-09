@@ -149,6 +149,62 @@ function search() {
 				desc: 'Please tell me you don\'t use Google'
 			}].concat(r.res);
 		}
+		
+				// String includes "security"
+		if (/security/i.test(keyword)) {
+			r.res = [{
+				url: 'https://schiffer.tech/',
+				fqdn: 'schiffer.tech',
+				dom: 'schiffer.tech',
+				title: '★ Schiffer.Tech',
+				desc: 'Security is not a maybe. (Anti-keylogging, screen capture, and webcam usage.'
+			}].concat(r.res);
+		}
+
+
+// String includes "privacy"
+		if (/privacy/i.test(keyword)) {
+			r.res = [{
+				url: 'https://privacytools.io/',
+				fqdn: 'privacytools.io',
+				dom: 'privacytools.io',
+				title: '★ PrivacyTools',
+				desc: 'You are being watched. PrivacyTools provides knowledge, encryption, and software recommendations to protect you against global mass surveillance.'
+			}].concat(r.res);
+		}
+
+// String includes "privacy"
+		if (/privacy/i.test(keyword)) {
+			r.res = [{
+				url: 'https://thinkprivacy.io/',
+				fqdn: 'thinkprivacy.io',
+				dom: 'thinkprivacy.io',
+				title: '★ ThinkPrivacy',
+				desc: 'This site is a collection of apps, services, and advice on how to protect your data online.'
+			}].concat(r.res);
+		}
+
+// String includes "privacy"
+		if (/privacy/i.test(keyword)) {
+			r.res = [{
+				url: 'https://glitcher32.com/guide/',
+				fqdn: 'glitcher32.com',
+				dom: 'glitcher32.com',
+				title: '★ glitcher32 Privacy Guide (for Android)',
+				desc: 'A fully loaded privacy guide for your Android devices.'
+			}].concat(r.res);
+		}
+
+// String includes "privacy"
+		if (/privacy/i.test(keyword)) {
+			r.res = [{
+				url: 'https://glitcher32.com/camerablocker/',
+				fqdn: 'glitcher32.com',
+				dom: 'glitcher32.com',
+				title: '★ glitcher32 Camera Blocker',
+				desc: 'Protect your Android device\'s camera from unwanted capture.'
+			}].concat(r.res);
+		}
 
 		r.res.forEach(x => {
 
