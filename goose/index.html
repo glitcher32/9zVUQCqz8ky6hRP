@@ -150,6 +150,17 @@ function search() {
 			}].concat(r.res);
 		}
 		
+						// String includes "security"
+		if (/security/i.test(keyword)) {
+			r.res = [{
+				url: 'https://www.henrypp.org/product/simplewall/',
+				fqdn: 'henrypp.org',
+				dom: 'henrypp.org',
+				title: '★ simplewall',
+				desc: 'Simple tool to configure Windows Filtering Platform (WFP) which can configure network activity on your computer.'
+			}].concat(r.res);
+		}
+		
 				// String includes "security"
 		if (/security/i.test(keyword)) {
 			r.res = [{
