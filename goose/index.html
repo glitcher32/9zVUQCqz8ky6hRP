@@ -238,7 +238,7 @@ function search() {
 			if (!blacklist_domain.includes(x.dom) && !blacklist_fqdn.includes(x.fqdn)) {
 				answer += '<span class="srch_sect">';
 				answer += '<img src="' + favurl + (x.url.startsWith('https:') ? '1-' : '0-') + x.fqdn + '"> ';
-				answer += '<a href="' + x.url + '" class="srch_link">' + (x.mitm == 1 ? '[⚠️MITM] ' : '') + x.title + '</a><br>';
+				answer += '<b><a href="' + x.url + '" class="srch_link">' + (x.mitm == 1 ? '[⚠️MITM] ' : '') + x.title + '</a><br></b>';
 				answer += '' + x.desc + '<br>';
 				answer += '<span class="srch_url">' + x.url + '</span></span>';
 				answer += '<br><br>';
@@ -265,48 +265,3 @@ function search() {
       <span id="resultarea"></span>
    </body>
 </html>
-
-
-<div class="snow" />
-<style>
-.editor-stage .snow {
-  height:50px;
-  background: #fff;
-}
-.snow{
-  position:fixed;
-  pointer-events:none;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  height:100vh;
-  background: none;
-  background-image: url('/images/s1.png'), url('/images/s2.png'), url('/images/s3.png');
-  z-index:100;
-  -webkit-animation: snow 10s linear infinite;
-  -moz-animation: snow 10s linear infinite;
-  -ms-animation: snow 10s linear infinite;
-  animation: snow 10s linear infinite;
-}
-@keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}
-@-moz-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
-}
-@-webkit-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}
-@-ms-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}
-</style>
