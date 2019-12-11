@@ -39,7 +39,11 @@ body {
 	background: 
 }
 input#what {
-	width: 80%
+	width: 80%;
+	border-radius:0.5em;
+}
+input#button {
+	border-radius:0.5em
 }
 span.srch_sect {
 	color: #fff
@@ -253,7 +257,7 @@ function search() {
       <form action="#" onsubmit="return search()">
 <a href="https://glitcher32.com/"><img src="https://glitcher32.com/logo.png" alt="" width="99" height="28" /></a><br>
          <input type="text" minlength="2" autocomplete="off" id="what" required placeholder="Search anything...">
-         <input type="submit" value="Search">
+         <input type="submit" id="button" value="Search">
 <br><a href="https://glitcher32.com/weather/"><span style="text-decoration: underline;"><span style="color: #ffff; text-decoration: underline;">[Weather]</span></span></a>
 <a href="https://glitcher32.com/encrypt/"><span style="text-decoration: underline;"><span style="color: #ffff; text-decoration: underline;">[Encrypt Files]</span></span></a>
 <a href="https://glitcher32.com/editor/"><span style="text-decoration: underline;"><span style="color: #ffff; text-decoration: underline;">[HTML Editor]</span></span></a>
