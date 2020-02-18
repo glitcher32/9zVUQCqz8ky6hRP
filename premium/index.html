@@ -1,0 +1,164 @@
+<link rel="stylesheet" href="../premium/all.css">
+<link rel="stylesheet" href="../premium/reset.min.css">
+<style class="INLINE_PEN_STYLESHEET_ID">
+      body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  background: #111111;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.cards {
+  display: -webkit-box;
+  display: flex;
+}
+
+.card {
+  width: 240px;
+  height: 400px;
+  margin: 0 20px;
+  padding: 30px 50px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: #FFF;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  cursor: pointer;
+}
+.card:nth-child(1) {
+  background: linear-gradient(-20deg, #bc4e9c, #f80759);
+}
+.card:nth-child(1) > .card-logo {
+  background: linear-gradient(-20deg, #bc4e9c, #f80759);
+}
+.card:nth-child(2) {
+  background: linear-gradient(-20deg, #1CB5E0, #000046);
+}
+.card:nth-child(2) > .card-logo {
+  background: linear-gradient(-20deg, #1CB5E0, #000046);
+}
+.card:nth-child(3) {
+  background: linear-gradient(-20deg, #b30000, #dd0000);
+}
+.card:nth-child(3) > .card-logo {
+  background: linear-gradient(-20deg, #b30000, #ff0000);
+}
+
+.card-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  border-radius: 50%;
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.card-price {
+  position: relative;
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+.card-price:before {
+  content: '$';
+  position: absolute;
+  font-size: 40px;
+  left: -22px;
+  top: -10px;
+}
+
+.card-list {
+  text-align: center;
+  white-space: nowrap;
+  margin-bottom: 15px;
+}
+.card-list .list-item {
+  margin-bottom: 10px;
+}
+.card-list .list-item > i {
+  padding-right: 10px;
+  font-size: 10px;
+}
+
+.card-buttom a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  background: #fff;
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 32px;
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+    </style>
+</script>
+</head>
+<body>
+<div class="cards">
+<div class="card">
+<div class="card-logo"><i class="fas fa-paper-plane"></i></div>
+<div class="card-title">Basic</div>
+<div class="card-price">25</div>
+<ul class="card-list">
+<li class="list-item"> <i class="fas fa-check"></i>10 GB Spance</li>
+<li class="list-item"> <i class="fas fa-check"></i>20 Domain Names</li>
+<li class="list-item"> <i class="fas fa-check"></i>20 Email Address</li>
+<li class="list-item"> <i class="fas fa-times"></i>Live Support</li>
+</ul>
+<div class="card-buttom"><a href="">Order Now</a></div>
+</div>
+<div class="card">
+<div class="card-logo"><i class="fas fa-plane"></i></div>
+<div class="card-title">Standard</div>
+<div class="card-price">50</div>
+<ul class="card-list">
+<li class="list-item"> <i class="fas fa-check"></i>100 GB Spance</li>
+<li class="list-item"> <i class="fas fa-check"></i>200 Domain Names</li>
+<li class="list-item"> <i class="fas fa-check"></i>200 Email Address</li>
+<li class="list-item"> <i class="fas fa-check"></i>Live Support</li>
+</ul>
+<div class="card-buttom"><a href="">Order Now</a></div>
+</div>
+<div class="card">
+<div class="card-logo"><i class="fas fa-fighter-jet"></i></div>
+<div class="card-title">Premium</div>
+<div class="card-price">100</div>
+<ul class="card-list">
+<li class="list-item"> <i class="fas fa-check"></i>500 GB Spance</li>
+<li class="list-item"> <i class="fas fa-check"></i>500 Domain Names</li>
+<li class="list-item"> <i class="fas fa-check"></i>500 Email Address</li>
+<li class="list-item"> <i class="fas fa-check"></i>Live Support</li>
+</ul>
+<div class="card-buttom"><a href="">Order Now </a></div>
+</div>
+</div>
