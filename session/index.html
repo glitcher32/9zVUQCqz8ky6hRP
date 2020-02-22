@@ -1,0 +1,248 @@
+<head>
+<title>Session</title>
+<meta name="charset" content="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />	
+<meta name="author" content="glitcher32">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="content-language" content="EN">
+<meta name="Rating" content="General">
+
+    <!-- Privacy -->
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="x-dns-prefetch-control" content="off">
+    <meta name="format-detection" content="telephone=no">
+
+<link rel="shortcut icon" type="image/x-icon" href="../glitcher32Security.ico">
+<link rel="apple-touch-icon" href="../glitcher32Security.ico">
+	<link rel="icon" type="image/x-icon" href="/glitcher32Security.ico" />
+<!-- default favicon -->
+<link rel="shortcut icon" href="../glitcher32Security.ico" type="image/x-icon">
+
+<!-- wideley used favicon -->
+<link rel="icon" href="../glitcher32Security.ico" sizes="32x32" type="image/x-icon">
+ 
+<!-- for apple mobile devices -->
+<link rel="apple-touch-icon-precomposed" href="../glitcher32Security.ico" type="image/x-icon" sizes="152x152">
+<link rel="apple-touch-icon-precomposed" href="../glitcher32Security.ico" type="image/x-icon" sizes="120x120">
+ 
+<!-- google tv favicon -->
+<link rel="icon" href="../glitcher32Security.ico" sizes="96x96" type="image/x-icon">
+<meta name="theme-color" content="#ff0000" />
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#ff0000">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#ff0000">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="red">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<body oncontextmenu="return false;">
+
+</head>
+<style>
+:root,
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  background: linear-gradient(to left top, rgba(254, 188, 197, 0.2), rgba(55, 217, 213, 0.2));
+  -webkit-font-smoothing: antialiased;
+}
+
+.download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.download__row {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 35em) {
+  .download__row {
+    flex-direction: row;
+  }
+}
+.download__title, .download__subtitle {
+  color: #b30000;
+  text-align: center;
+}
+.download__title {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0.5em 0 0;
+  animation: fadeSlideDown 1s cubic-bezier(0.55, 0.15, 0.45, 0.85);
+}
+@media (min-width: 50em) {
+  .download__title {
+    font-size: 2.5vw;
+  }
+}
+.download__subtitle {
+  font-weight: 200;
+  margin: 0 0 1em;
+  animation: fadeSlideUp 1s cubic-bezier(0.55, 0.15, 0.45, 0.85);
+}
+@media (min-width: 50em) {
+  .download__subtitle {
+    font-size: 2vw;
+  }
+}
+
+.phone {
+  display: block;
+  width: 50%;
+}
+
+.icon {
+  height: 2.5rem;
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+span {
+  display: inline-block;
+}
+
+.icon-link {
+  min-width: 18rem;
+  background: #b30000;
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  padding: 2rem 2.5rem 2rem 2rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  animation: turnUp 0.3s cubic-bezier(0.55, 0.15, 0.45, 0.85);
+  transition: box-shadow 0.2s cubic-bezier(0.55, 0.15, 0.45, 0.85);
+}
+.icon-link__eyebrow {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+}
+.icon-link__source {
+  font-size: 2rem;
+  line-height: 1;
+}
+.icon-link svg {
+  fill: #fff;
+}
+.icon-link:hover, .icon-link:focus, .icon-link:active {
+  color: #fff;
+  box-shadow: 0 14px 33px rgba(32, 190, 255, 0.09);
+}
+.icon-link:hover svg, .icon-link:focus svg, .icon-link:active svg {
+  fill: #fff;
+}
+.icon-link--apple:hover, .icon-link--apple:focus, .icon-link--apple:active {
+  background: #999;
+}
+.icon-link--google:hover, .icon-link--google:focus, .icon-link--google:active {
+  background: #607D8B;
+}
+
+@keyframes turnUp {
+  from {
+    transform: scale(0.9) rotate(3deg) translate3d(0, 10%, 0);
+  }
+}
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0.8;
+    transform: translate3d(0, 3%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0.8;
+    transform: translate3d(0, -3%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeSlideUpSlow {
+  from {
+    opacity: 0.8;
+    transform: translate3d(0, 15%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="download">
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://glitcher32.com/session/logo.png" width="380" height="76" /></p>
+
+<h1 class="download__title">Send Encrypted Messages</h1>
+<h2 class="download__subtitle">Add glitcher32 on Session</h2>
+<div class="download__row">
+<a href="https://apps.apple.com/app/session-private-messenger/id1470168868" class="icon-link icon-link--apple"><svg class="icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8.112 4.59c.54 0 1.544-.743 2.85-.743 2.25 0 3.135 1.6 3.135 1.6s-1.73.885-1.73 3.032c0 2.42 2.155 3.25 2.155 3.25s-1.507 4.24-3.542 4.24c-.935 0-1.662-.63-2.647-.63-1.004 0-2 .65-2.648.65-1.86 0-4.207-4.03-4.207-7.26 0-3.19 1.988-4.85 3.852-4.85 1.21 0 2.152.69 2.782.69zm.563-3.198C9.725.007 11.188 0 11.188 0s.217 1.303-.827 2.558c-1.11 1.34-2.38 1.12-2.38 1.12s-.24-1.054.7-2.286z" /></svg>
+<span class="icon-link__text">
+<span class="icon-link__eyebrow">Download on the</span>
+<span class="icon-link__source">App Store</span>
+</span>
+</a>
+<a href="https://play.google.com/store/apps/details?id=network.loki.messenger" class="icon-link icon-link--google">
+<svg class="icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M.814 0c-.02.062-.04.123-.04.205v15.487c0 .144.04.226.122.308l7.61-8.062L.814 0zM9.02 8.472l1.968 2.03-2.81 1.6s-3.57 2.03-5.538 3.16l6.38-6.79zm.533-.554l2.112 2.195c.33-.185 2.913-1.662 3.282-1.867.39-.225.35-.533.02-.697-.307-.17-2.89-1.65-3.28-1.89L9.552 7.92zm-.534-.533l1.99-2.113-2.84-1.62S3.54 1.004 2 .12l7.02 7.266z" /></svg>
+<span class="icon-link__text">
+<span class="icon-link__eyebrow">Get it on</span>
+<span class="icon-link__source">Google Play</span>
+</span>
+</a>
+</div>
+</div>
+
+<style>
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+</style>
+<script>
+$(document).on('keydown',function(e)
+{ 
+    var key = e.charCode || e.keyCode;
+    if(key == 123 || key == 27 )
+        {}
+    else
+        e.preventDefault();
+});
+</script>
