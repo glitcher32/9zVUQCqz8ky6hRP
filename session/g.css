@@ -80,7 +80,7 @@
     clip: rect(42px, 9999px, 52px, 0);
   }
   85% {
-    clip: rect(44px, 9999px, 89px, 0);
+    clip: rect(px, 9999px, 89px, 0);
   }
   90% {
     clip: rect(35px, 9999px, 16px, 0);
@@ -228,7 +228,7 @@ h2{
     clip: rect(42px, 9999px, 52px, 0);
   }
   85% {
-    clip: rect(44px, 9999px, 89px, 0);
+    clip: rect(px, 9999px, 89px, 0);
   }
   90% {
     clip: rect(35px, 9999px, 16px, 0);
@@ -376,7 +376,7 @@ h2{
     clip: rect(42px, 9999px, 52px, 0);
   }
   85% {
-    clip: rect(44px, 9999px, 89px, 0);
+    clip: rect(px, 9999px, 89px, 0);
   }
   90% {
     clip: rect(35px, 9999px, 16px, 0);
@@ -524,7 +524,7 @@ h2{
     clip: rect(42px, 9999px, 52px, 0);
   }
   85% {
-    clip: rect(44px, 9999px, 89px, 0);
+    clip: rect(px, 9999px, 89px, 0);
   }
   90% {
     clip: rect(35px, 9999px, 16px, 0);
@@ -603,7 +603,7 @@ h2{
   top: 0;
   left: 0;
   right: 0;
-    font-size:44px;
+    font-size:px;
   overflow: hidden;
   background: #fff;
   color: #333132;
@@ -672,7 +672,7 @@ h2{
     clip: rect(42px, 9999px, 52px, 0);
   }
   85% {
-    clip: rect(44px, 9999px, 89px, 0);
+    clip: rect(px, 9999px, 89px, 0);
   }
   90% {
     clip: rect(35px, 9999px, 16px, 0);
@@ -730,7 +730,7 @@ h2{
   top: 0;
   left: 0;
   right: 0;
-    font-size:44px;
+    font-size:px;
   overflow: hidden;
   background: #fff;
   color: #333132;
@@ -799,7 +799,7 @@ h2{
     clip: rect(42px, 9999px, 52px, 0);
   }
   85% {
-    clip: rect(44px, 9999px, 89px, 0);
+    clip: rect(px, 9999px, 89px, 0);
   }
   90% {
     clip: rect(35px, 9999px, 16px, 0);
@@ -857,7 +857,7 @@ h2{
   top: 0;
   left: 0;
   right: 0;
-    font-size:44px;
+    font-size:px;
   overflow: hidden;
   background: #fff;
   color: #333132;
@@ -926,7 +926,7 @@ h2{
     clip: rect(42px, 9999px, 52px, 0);
   }
   85% {
-    clip: rect(44px, 9999px, 89px, 0);
+    clip: rect(px, 9999px, 89px, 0);
   }
   90% {
     clip: rect(35px, 9999px, 16px, 0);
@@ -984,7 +984,7 @@ h2{
   top: 0;
   left: 0;
   right: 0;
-    font-size:44px;
+    font-size:px;
   overflow: hidden;
   background: #fff;
   color: #333132;
@@ -1053,7 +1053,7 @@ h2{
     clip: rect(42px, 9999px, 52px, 0);
   }
   85% {
-    clip: rect(44px, 9999px, 89px, 0);
+    clip: rect(px, 9999px, 89px, 0);
   }
   90% {
     clip: rect(35px, 9999px, 16px, 0);
