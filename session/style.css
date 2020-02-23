@@ -36,9 +36,6 @@ textarea {
   padding: 10px 15px;
   resize: vertical;
 }
-[id="empty-field"] {
-  margin-top: 3em;
-}
 textarea:focus {
   border-color: red;
 }
