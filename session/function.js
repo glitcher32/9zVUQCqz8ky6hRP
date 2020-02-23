@@ -1,5 +1,5 @@
 var toCopy  = document.getElementById( 'copy-text' ),
-    btnCopy = document.getElementById( 'copy' ),
+    btnCopy = document.getElementById( 'copy' ),;
  
 btnCopy.addEventListener( 'click', function(){
   toCopy.select();
