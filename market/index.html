@@ -95,17 +95,17 @@
         <span class="fa fa-home"></span>
         <span class="tab-label">Home</span>
       </a> 
-      <a class="tab-item " href="#"> 
+      <a class="tab-item " id="soon"> 
         <span class="fa fa-refresh"></span>
         <span class="tab-label">Updated</span>
       </a> 
-      <a class="tab-item " href="#">
+      <a class="tab-item " id="soon">
         <span class="fa fa-database"></span>
         <span class="tab-label">Categories</span>
       </a> 
-      <li class="tab-item " id="aboutus"> <span class="fa fa-diamond"></span>
+      <a class="tab-item " id="aboutus"> <span class="fa fa-diamond"></span>
         <span class="tab-label">About</span>
-      </li>
+      </a>
     </nav>
 		
 		
@@ -268,6 +268,20 @@
 			<div class="item-subtitle">Scan apps for trackers offline.</div>
 		</div>
 </a></li>
+<li><a
+	href="https://maxlock.maxr1998.de/"
+	class="item-link item-content">
+		<div class="item-media">
+			<img src="https://glitcher32.com/market/images/maxlock.png" width="80">
+		</div>
+		<div class="item-inner">
+			<div class="item-title-row">
+				<div class="item-title app-title">MaxLock (Android)</div>
+				<div class="item-after"></div>
+			</div>
+			<div class="item-subtitle">Lock apps with a password.</div>
+		</div>
+</a></li>
 
 
 				</ul>
@@ -400,7 +414,15 @@ $(function(){
 	   
     });
 });
+
+$(function(){
+    $(document).on('click','#soon',function () {
+       $.alert('Coming soon, hopefully.');
+	   
+    });
+});
 </script>
+
 
 		<style>
 body{
