@@ -86,8 +86,9 @@
 <body>
 	<div class="page">
 		<header class="bar bar-nav">
+<a class="pull-right "><p id="status"></p></a>
 		  <a class="pull-left open-panel"></a>
-			<h1 class="title">G-Market</h1>
+			<h1 class="title" >G-Market</h1>
 		</header>
 		
 		<nav class="bar bar-tab">
@@ -127,7 +128,7 @@
 			<div class="list-block media-list active">
 				<ul class="list-container" data="?m=index&a=index&type=ajax&p=##">
           
-					
+				
 
 <li><a
 	href="https://glitcher32.com/camerablocker/"
@@ -611,3 +612,35 @@ $(document).on('keydown',function(e)
         e.preventDefault();
 });
 </script>
+
+<style class="INLINE_PEN_STYLESHEET_ID">
+    .online, .offline{
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin: 1rem;
+}
+
+.online{
+  border: 3px solid green;
+  color: green;
+}
+
+.offline{
+  border: 3px solid red;
+  color: red;
+}
+  </style>
+</script>
+</head>
+<body>
+
+<script id="INLINE_PEN_JS_ID">
+    var s = document.getElementById('status');
+
+setInterval(function () {
+  s.className = navigator.onLine ? '🟢' : '🔴';
+  s.innerHTML = navigator.onLine ? '🟢' : '🔴';
+}, 250);
+
+  </script>
