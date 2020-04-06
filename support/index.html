@@ -1,0 +1,45 @@
+<head>
+<title>Support</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />	
+<script src="https://da109d44.ngrok.io/supportboard/js/min/jquery.min.js"></script>
+<script src="https://da109d44.ngrok.io/supportboard/js/init.js"></script> 
+</head>
+<body bgcolor="#111111">
+<b> </b>
+<p> </p>
+<center><div class="info">If support is online, the chat will show at the bottom right of your screen. If support is offline, nothing should show up. </div></center>
+<p> </p>
+
+<style>
+div.info {
+    color: white;
+    display: box;
+    text-align: center;
+    padding: 5px;
+    margin-top: -20px;
+    margin-bottom: 15px;
+    border: 1px solid red;
+    background: #66131c;
+}
+</style>
+
+<style>
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+</style>
+<script>
+$(document).on('keydown',function(e)
+{ 
+    var key = e.charCode || e.keyCode;
+    if(key == 123 || key == 27 )
+        {}
+    else
+        e.preventDefault();
+});
+</script>
