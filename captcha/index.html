@@ -1,9 +1,4 @@
-<head>
-  <title>Security</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src='../captcha/jquery.min.js'></script>
-  
-</head>
+<script src='../captcha/jquery.min.js'></script>
 
 
 
@@ -11,6 +6,8 @@
 <section>
 <p> </p>
   <fieldset>
+<p> </p>
+<div class="info">For security reasons, please complete the captcha.</div>
     <span id="SuccessMessage" class="success">You have successfully entered the captcha.</span>
     <input type="text" id="UserCaptchaCode" class="CaptchaTxtField" placeholder='Enter Captcha - Case Sensitive'>
     <span id="WrongCaptchaError" class="error"></span>
@@ -219,3 +216,15 @@ function CheckCaptcha() {
 }
 </script>
 
+<style>
+div.info {
+    color: white;
+    display: box;
+    text-align: center;
+    padding: 5px;
+    margin-top: -20px;
+    margin-bottom: 15px;
+    border: 1px solid red;
+    background: #66131c;
+}
+</style>
