@@ -3,12 +3,12 @@
 
 
     <i class="fa fa-shield" style="color:red"></i>
-    <span>glitcher32 Security Checkpoint</span>
+    <span>Security Checkpoint</span>
   
 
 </header>
 
-<link rel="stylesheet" href="../captcha/font-awesome.min.css">
+
 
 <section>
   <fieldset>
@@ -213,6 +213,7 @@ function CheckCaptcha() {
       CreateCaptcha();
       $('#WrongCaptchaError').fadeOut(100);
       $('#SuccessMessage').fadeIn(500).css('display','block').delay(5000).fadeOut(250);
+      setTimeout("location.href = 'https://glitcher32.com/pin/';",1500);
     }
   }  
 }
