@@ -329,7 +329,7 @@ input[type=text] {
 <div class="reply">
 <div class="typing"></div>
 <div class="wrapper">
-<input class="usermsg" type="text" placeholder="Say hello!" disabled /><button class="send">Send</button>
+<input class="usermsg" type="text" placeholder="Say hello! Type /report to report user" disabled /><button class="send">Send</button>
 </div>
 </div>
 </div>
@@ -513,6 +513,20 @@ $(document).ready(function () {
     "Im a smart 10 year old",
     "Im 10 you boomer",
     "im actually 10yrs old so shut the fuck up"]],
+
+
+    [
+
+new RegExp('.*(?:report|report you).*', 'gi'),
+    [
+    "You cant ban me",
+    "lol you try and ban me?",
+    "Poor noob needs to report me?",
+    "Aw you gotta report me to win",
+    "What a noob, you cant even ban me",
+    "Pfffttt reporting never works",
+    "Im gonna report you to",
+    "I will never be banned"]],
 
 
     [
