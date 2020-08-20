@@ -56,6 +56,8 @@
             position: relative;
             z-index: 1;
             background: #FFFFFF;
+            background-image: url('../red.gif');
+            background-position: center; 
             max-width: 360px;
             margin: 0 auto 100px;
             padding: 45px;
@@ -138,20 +140,22 @@
     <div class="staticrypt-form">
         <div class="staticrypt-instructions">
             
-            <p><p>Please enter the password to continue...</p>
+            <p><p><span style="color: #ffffff;">Please enter the password to continue...</span></p>
 </p>
         </div>
 
         <hr class="staticrypt-hr">
 
         <form id="staticrypt-form" action="#" method="post">
-            <input id="staticrypt-password"
+            <input id="staticrypt-password" minlength="2"
                    type="password"
                    name="password"
                    placeholder=""
+
                    autofocus/>
 
             <input type="submit" class="staticrypt-decrypt-button" value="CONTINUE"/>
+
         </form>
     </div>
 
