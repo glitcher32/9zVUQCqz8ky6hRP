@@ -3,8 +3,6 @@
 <meta name="charset" content="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />	
 <meta name="description" content="A simple calculator. No ads or trackers.">
-<meta name="keywords" content="glitcher32, calculator, math, free, privacy, secure, security, safe">
-<meta name="copyright" content="Copyright © 2019 glitcher32 Services">
 <meta name="author" content="glitcher32">
 <meta name="robots" content="index, follow">
 <meta name="googlebot" content="index, follow">
@@ -45,7 +43,6 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <body oncontextmenu="return false;">
 
-<script src='//www.ip-approval.com/1/2/2018/ip-checker-js'></script>
 </head>
 <style>
 body{
@@ -90,23 +87,26 @@ body{
          text-align:center; 
          width: 210px; 
          color:red; 
-         border: solid black 2px; 
+         border: solid #b30000 2px; 
          } 
   
          input[type="button"] 
          { 
-         background-color:#999999; 
-         color: black; 
-         border: solid black 2px; 
+         background-color:#222222; 
+         color: white; 
+         border: solid #b30000 2px; 
          width:100% 
          } 
   
          input[type="text"] 
          { 
          background-color:white; 
-         border: solid black 2px; 
+         border: solid #b30000 2px; 
          width:100% 
          } 
+body {
+    background-color: #222222;
+}
       </style> 
    </head> 
    <!-- create table -->
@@ -206,14 +206,14 @@ form.total.value = "$ " + ttl; // display total amount
 </script>
 
 <form name="coinform">
-      <div align="center"><center><table border="1">
+      <div align="center"><center><table border="3" bordercolor="b30000">
         <tbody><tr>
-          <td>$ 100</td>
-          <td>$ 50</td>
-          <td>$ 20</td>
-          <td>$ 10</td>
-          <td>$ 5</td>
-          <td>$ 1</td>
+          <td><span style="color: #fff;">$ 100</td></span>
+          <td><span style="color: #fff;">$ 50</td></span>
+          <td><span style="color: #fff;">$ 20</td></span>
+          <td><span style="color: #fff;">$ 10</td></span>
+          <td><span style="color: #fff;">$ 5</td></span>
+          <td><span style="color: #fff;">$ 1</td></span>
         </tr>
         <tr>
           <td><input type="text" name="hun" size="3"></td>
@@ -227,11 +227,11 @@ form.total.value = "$ " + ttl; // display total amount
           <td colspan="6">&nbsp;</td>
         </tr>
         <tr>
-          <td>50 ¢</td>
-          <td>25 ¢</td>
-          <td>10 ¢</td>
-          <td>5 ¢</td>
-          <td>1 ¢</td>
+          <td><span style="color: #fff;">50 ¢</td></span>
+          <td><span style="color: #fff;">25 ¢</td></span>
+          <td><span style="color: #fff;">10 ¢</td></span>
+          <td><span style="color: #fff;">5 ¢</td></span>
+          <td><span style="color: #fff;">1 ¢</td></span>
         </tr>
         <tr>
           <td><input type="text" name="hlf" size="3"></td>
@@ -251,7 +251,7 @@ form.total.value = "$ " + ttl; // display total amount
     </form>
 
 <p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;"><a title="Home page" href="https://glitcher32.com"><strong>Home</strong></a></p>
+<p style="text-align: center;"><a title="Home page" href="https://glitcher32.com"><strong><span style="color: #ff0000;">Home</span></strong></a></p>
 
  <script>
 $(document).on('keydown',function(e)
